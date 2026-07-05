@@ -23,7 +23,7 @@ a {
   position: relative;
   background:
     linear-gradient(rgba(5, 4, 3, 0.35), rgba(5, 4, 3, 0.95)),
-    url("images/hero.jpg");
+    url("images/Manuscript-open_1920x1080-withBG.png");
   background-size: cover;
   background-position: center;
   display: flex;
