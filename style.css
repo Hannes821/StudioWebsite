@@ -8,7 +8,10 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Berry Rotunda";
+  src: url("fonts/BerryRotunda.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
   background: #080705;
   color: #f3ead7;
 }
@@ -112,7 +115,10 @@ nav a:hover {
 }
 
 .steamButton,
-.discordButton {
+.discordButton,
+.youtubeButton,
+.patreonButton,
+.facebookButton {
   padding: 15px 28px;
   border: 1px solid #d6b56d;
   text-transform: uppercase;
@@ -125,13 +131,27 @@ nav a:hover {
   background: #8f2f1b;
   color: #fff4df;
 }
-
+.youtubeButton {
+  background: rgba(0,0,0,0.45);
+  color: #f3ead7;
+}
 .discordButton {
+  background: rgba(0,0,0,0.45);
+  color: #f3ead7;
+}
+.patreonButton {
+  background: rgba(0,0,0,0.45);
+  color: #f3ead7;
+}
+.facebookButton {
   background: rgba(0,0,0,0.45);
   color: #f3ead7;
 }
 
 .steamButton:hover,
+.youtubeButton:hover,
+.patreonButton:hover,
+.facebookButton:hover,
 .discordButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(0,0,0,0.45);
@@ -194,30 +214,6 @@ section h2 {
   justify-content: center;
   color: #b8aa91;
   font-size: 1.1rem;
-}
-
-.roadmap {
-  list-style: none;
-  padding: 0;
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.25rem;
-}
-
-.roadmap li {
-  padding: 18px 24px;
-  margin-bottom: 12px;
-  background: rgba(255,255,255,0.035);
-  border-left: 4px solid #d6b56d;
-}
-
-#community {
-  text-align: center;
-}
-
-#community p {
-  font-size: 1.2rem;
-  color: #d6c8ad;
 }
 
 footer {
