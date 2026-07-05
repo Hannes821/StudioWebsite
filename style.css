@@ -1,1 +1,146 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #12100d;
+  color: #f3ead7;
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    linear-gradient(rgba(10, 8, 5, 0.45), rgba(10, 8, 5, 0.9)),
+    url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+h1 {
+  font-size: clamp(3rem, 9vw, 7rem);
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.8rem;
+  margin: 20px 0 5px;
+  color: #d6b56d;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 35px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border: 1px solid #d6b56d;
+  text-decoration: none;
+  color: #f3ead7;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+.btn.primary {
+  background: #8f2f1b;
+}
+
+.btn.secondary {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #d6b56d;
+  border-bottom: 1px solid rgba(214, 181, 109, 0.35);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.grid,
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.card,
+.placeholder {
+  background: #1d1812;
+  border: 1px solid rgba(214, 181, 109, 0.25);
+  padding: 28px;
+  min-height: 120px;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b8aa91;
+}
+
+.roadmap {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.roadmap li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(214, 181, 109, 0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #0b0907;
+  color: #b8aa91;
+}
+
+footer a {
+  color: #d6b56d;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .tagline {
+    font-size: 1.4rem;
+  }
+}
