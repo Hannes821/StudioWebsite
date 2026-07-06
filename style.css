@@ -20,12 +20,21 @@ Font
   font-style: normal;
   font-display: swap;
 }
+/* ==============================
+   INK
+============================== */
+:root {
+  --ink: #3b1f22;
+  --ink-muted: #4a2b2d;
+  --ink-gold: #8a5f2b;
+}
 /*
 ----------------------------------------
 Background
 ----------------------------------------
 */
 body {
+  color: var(--ink);
   margin: 0; /* kein Rand Einrücken --> nichts weiß */
   font-family: "Berry Rotunda", serif;
   background:
@@ -113,31 +122,22 @@ nav a:hover {
 .heroContent h1 {
 
     margin: 0;
-
     width: 100%; /* probiere 900px */
-
     font-size: clamp(3rem, 5.8vw, 6rem);
-
     line-height: 1;
-
     letter-spacing: -0.05em; /* enger aneinander! */
-
-    color: #f8eed7;
-
-    text-shadow: 0 10px 35px rgba(0,0,0,0.75);
+    color: var(--ink);
+  text-shadow: 0 2px 2px rgba(255, 245, 220, 0.35);
 }
 
 .heroContent p {
 
     width: 42%;
-
     margin: 32px 0;
-
     font-size: 1.25rem;
-
     line-height: 1.6;
-
-    color: #e0d2b6;
+    color: var(--ink-muted);
+  text-shadow: 0 2px 2px rgba(255, 245, 220, 0.35);
 }
 
 .buttons {
@@ -202,7 +202,8 @@ section {
 
 section h2 {
   font-size: clamp(2.2rem, 5vw, 4rem);
-  color: #d6b56d;
+  color: var(--ink);
+  text-shadow: 0 2px 2px rgba(255, 245, 220, 0.35);
   text-align: center;
   margin-bottom: 50px;
 }
@@ -230,7 +231,7 @@ section h2 {
 }
 
 .feature p {
-  color: #cfc1a8;
+  color: var(--ink-muted);
   font-size: 1.05rem;
   line-height: 1.55;
 }
