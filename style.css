@@ -8,7 +8,11 @@
 html {
   scroll-behavior: smooth;
 }
-
+/*
+----------------------------------------
+Font
+----------------------------------------
+*/
 @font-face {
   font-family: "Berry Rotunda";
   src: url("fonts/BerryRotunda.otf") format("opentype");
@@ -16,11 +20,21 @@ html {
   font-style: normal;
   font-display: swap;
 }
-
+/*
+----------------------------------------
+Background
+----------------------------------------
+*/
 body {
-  margin: 0;
+  margin: 0; /* kein Rand Einrücken --> nichts weiß */
   font-family: "Berry Rotunda", serif;
-  background: #080705;
+  background:
+        linear-gradient(rgba(5,4,3,0.35), rgba(5,4,3,0.95)),
+        url("images/Manuscript-open_1920x1080-withBG.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
   color: #f3ead7;
 }
 
@@ -36,11 +50,6 @@ Hero Section
 .hero {
   min-height: 50vh; /* User can actually see so much % of the screen filled with hero content */
   position: relative;
-  background:
-    linear-gradient(rgba(5, 4, 3, 0.35), rgba(5, 4, 3, 0.95)),
-    url("images/Manuscript-open_1920x1080-withBG.png");
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
 }
