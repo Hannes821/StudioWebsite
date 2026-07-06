@@ -49,7 +49,7 @@ Hero Section
 ----------------------------------------
 */
 .hero {
-  min-height: 50vh; /* User can actually see so much % of the screen filled with hero content */
+  min-height: 30vh; /* User can actually see so much % of the screen filled with hero content */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -143,13 +143,9 @@ nav a:hover {
 .buttons {
 
     display: flex;
-
     gap: 18px;
-
     justify-content: flex-start;
-
     flex-wrap: wrap;
-
     margin-top: 18px;
 }
 
@@ -199,8 +195,8 @@ nav a:hover {
 }
 
 section {
-  padding: 30px 7vw;
-  max-width: 300px;
+  padding: 10px 7vw;
+  max-width: 10px;
   margin: 0 auto;
 }
 
