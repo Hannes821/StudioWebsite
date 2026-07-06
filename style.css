@@ -29,7 +29,7 @@ body {
   margin: 0; /* kein Rand Einrücken --> nichts weiß */
   font-family: "Berry Rotunda", serif;
   background:
-        linear-gradient(rgba(5,4,3,0.35), rgba(5,4,3,0.95)),
+        /*linear-gradient(rgba(5,4,3,0.35), rgba(5,4,3,0.95)),*/
         url("images/Manuscript-open_1920x1080-withBG.png");
 
     background-size: cover;
