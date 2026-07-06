@@ -5,15 +5,18 @@
 html {
   scroll-behavior: smooth;
 }
-
-body {
-  margin: 0;
+@font-face {
   font-family: "Berry Rotunda";
   src: url("fonts/BerryRotunda.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: "Berry Rotunda", serif;
   background: #080705;
   color: #f3ead7;
+}
 }
 
 a {
@@ -116,9 +119,9 @@ nav a:hover {
 
 .steamButton,
 .discordButton,
-.youtubeButton,
-.patreonButton,
-.facebookButton {
+.youtube,
+.patreon,
+.facebook {
   padding: 15px 28px;
   border: 1px solid #d6b56d;
   text-transform: uppercase;
