@@ -35,6 +35,7 @@ body {
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
+   background-colour: #080705;
   color: #f3ead7;
 }
 
@@ -192,9 +193,18 @@ nav a:hover {
   color: #fff4df;
 }
 
-.discordButton,
-.youtube,
-.patreon,
+.discordButton {
+  background: #8f2f1b;
+  color: #fff4df;
+}
+.youtube {
+  background: #8f2f1b;
+  color: #fff4df;
+}
+.patreon {
+  background: #8f2f1b;
+  color: #fff4df;
+}
 .facebook {
   background: rgba(0, 0, 0, 0.45);
   color: #f3ead7;
@@ -232,8 +242,7 @@ section h2 {
 }
 
 .feature {
-  background:
-    linear-gradient(145deg, rgba(35, 28, 20, 0.95), rgba(16, 13, 10, 0.95));
+  background: transparent;
   border: 1px solid rgba(214, 181, 109, 0.25);
   padding: 20px;
   min-height: 50px;
@@ -262,10 +271,8 @@ section h2 {
 
 .placeholder {
   min-height: 220px;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
-    #1a140f;
-  border: 1px solid rgba(214, 181, 109, 0.25);
+  background: transparent;
+   border: 1px solid rgba(214, 181, 109, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
