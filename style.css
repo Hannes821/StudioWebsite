@@ -5,18 +5,20 @@
 html {
   scroll-behavior: smooth;
 }
+
 @font-face {
   font-family: "Berry Rotunda";
   src: url("fonts/BerryRotunda.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
+
 body {
   margin: 0;
   font-family: "Berry Rotunda", serif;
   background: #080705;
   color: #f3ead7;
-}
 }
 
 a {
@@ -41,8 +43,9 @@ a {
   inset: 0;
   background:
     radial-gradient(circle at center, rgba(190, 145, 70, 0.12), transparent 45%),
-    linear-gradient(to bottom, rgba(0,0,0,0.2), #080705);
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #080705);
   z-index: 1;
+  pointer-events: none;
 }
 
 nav {
@@ -72,10 +75,12 @@ nav a {
   color: #f3ead7;
   font-size: 0.95rem;
   opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 nav a:hover {
   color: #d6b56d;
+  opacity: 1;
 }
 
 .heroContent {
@@ -89,23 +94,18 @@ nav a:hover {
 
 .heroContent h1 {
   margin: 0;
-  font-size: clamp(4rem, 11vw, 9rem);
-  letter-spacing: 0.16em;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.08em;
   color: #f8eed7;
   text-shadow: 0 10px 40px #000;
-}
-
-.heroContent h2 {
-  margin: 18px 0;
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 0.95;
-  color: #d6b56d;
 }
 
 .heroContent p {
   max-width: 720px;
   margin: 28px auto;
   font-size: 1.25rem;
+  line-height: 1.6;
   color: #e0d2b6;
 }
 
@@ -127,37 +127,29 @@ nav a:hover {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: bold;
-  transition: 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .steamButton {
   background: #8f2f1b;
   color: #fff4df;
 }
-.youtubeButton {
-  background: rgba(0,0,0,0.45);
-  color: #f3ead7;
-}
-.discordButton {
-  background: rgba(0,0,0,0.45);
-  color: #f3ead7;
-}
-.patreonButton {
-  background: rgba(0,0,0,0.45);
-  color: #f3ead7;
-}
-.facebookButton {
-  background: rgba(0,0,0,0.45);
+
+.discordButton,
+.youtube,
+.patreon,
+.facebook {
+  background: rgba(0, 0, 0, 0.45);
   color: #f3ead7;
 }
 
 .steamButton:hover,
-.youtubeButton:hover,
-.patreonButton:hover,
-.facebookButton:hover,
-.discordButton:hover {
+.discordButton:hover,
+.youtube:hover,
+.patreon:hover,
+.facebook:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
   background: #b84625;
 }
 
@@ -186,7 +178,7 @@ section h2 {
   border: 1px solid rgba(214, 181, 109, 0.25);
   padding: 32px;
   min-height: 220px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
 .feature h3 {
@@ -198,6 +190,7 @@ section h2 {
 .feature p {
   color: #cfc1a8;
   font-size: 1.05rem;
+  line-height: 1.55;
 }
 
 .gallery {
@@ -209,7 +202,7 @@ section h2 {
 .placeholder {
   min-height: 220px;
   background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.65)),
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
     #1a140f;
   border: 1px solid rgba(214, 181, 109, 0.25);
   display: flex;
@@ -217,6 +210,7 @@ section h2 {
   justify-content: center;
   color: #b8aa91;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 footer {
@@ -232,10 +226,15 @@ footer {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footerLinks a {
   color: #d6b56d;
+}
+
+.footerLinks a:hover {
+  color: #f3d28a;
 }
 
 @media (max-width: 800px) {
@@ -252,6 +251,10 @@ footer {
 
   .heroContent {
     padding-top: 50px;
+  }
+
+  .heroContent h1 {
+    letter-spacing: 0.04em;
   }
 
   section {
