@@ -57,7 +57,7 @@ Hero Section
 /* ==============================
    Transparent Overlay
 ============================== */
-.overlay {
+/* .overlay {
     position: absolute;
     inset: 0;
 
