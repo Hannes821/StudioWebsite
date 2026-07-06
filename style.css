@@ -55,7 +55,7 @@ Hero Section
         radial-gradient(
             ellipse at center,
             rgba(255,220,140,0.06),
-            transparent 55%
+            transparent 95%
         ),
         linear-gradient(
             to bottom,
@@ -72,7 +72,7 @@ Hero Section
 nav {
   position: relative;
   z-index: 2;
-  padding: 28px 7vw;
+  padding: 10px 7vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,13 +126,13 @@ nav a:hover {
 
     margin: 0;
 
-    width: 72%;
+    width: 100%; /* probiere 900px */
 
     font-size: clamp(3rem, 5.8vw, 6rem);
 
-    line-height: 0.92;
+    line-height: 1;
 
-    letter-spacing: 0.05em;
+    letter-spacing: -0.05em; /* enger aneinander! */
 
     color: #f8eed7;
 
