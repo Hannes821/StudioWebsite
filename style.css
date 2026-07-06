@@ -34,7 +34,7 @@ Hero Section
 ----------------------------------------
 */
 .hero {
-  min-height: 2000vh; /* User can actually see so much % of the screen filled with hero content */
+  min-height: 100vh; /* User can actually see so much % of the screen filled with hero content */
   position: relative;
   background:
     linear-gradient(rgba(5, 4, 3, 0.35), rgba(5, 4, 3, 0.95)),
