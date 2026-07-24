@@ -280,6 +280,114 @@ footer p {
   font-size: 0.86rem;
 }
 
+.legal-note a {
+  color: #c7b899;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.legal-page {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(23, 16, 12, 0.56), rgba(23, 16, 12, 0.78)),
+    url("images/manuscript-bg.webp") center top / cover fixed;
+}
+
+.legal-header {
+  padding: 0 24px;
+  color: #fff4df;
+  background: rgba(23, 16, 12, 0.92);
+  border-bottom: 1px solid rgba(214, 181, 109, 0.3);
+}
+
+.legal-header .site-nav {
+  width: min(100%, 940px);
+}
+
+.legal-header .logo {
+  color: #f2d38d;
+}
+
+.legal-header a:not(.logo) {
+  color: #fff4df;
+  font-weight: 700;
+}
+
+.legal-document {
+  width: min(calc(100% - 32px), 940px);
+  margin: clamp(28px, 5vw, 64px) auto;
+  padding: clamp(28px, 6vw, 72px);
+  background: rgba(247, 235, 201, 0.97);
+  border: 1px solid rgba(83, 48, 34, 0.3);
+  box-shadow: 0 22px 60px rgba(10, 6, 4, 0.42);
+}
+
+.legal-document h1 {
+  max-width: 780px;
+  font-size: clamp(2.35rem, 6vw, 4.4rem);
+  line-height: 1.04;
+}
+
+.legal-document h2 {
+  max-width: none;
+  margin-top: 2.4rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.legal-document h3 {
+  margin: 1.6rem 0 0.35rem;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.08rem;
+}
+
+.legal-document p,
+.legal-document li {
+  color: var(--ink-muted);
+}
+
+.legal-document p {
+  margin: 0.7rem 0;
+}
+
+.legal-document ul {
+  margin: 0.65rem 0 1rem;
+  padding-left: 1.4rem;
+}
+
+.legal-document li + li {
+  margin-top: 0.28rem;
+}
+
+.legal-meta {
+  margin: 1rem 0 2.4rem;
+  padding-bottom: 1.2rem;
+  color: var(--accent);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(83, 48, 34, 0.24);
+}
+
+.legal-document a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.17em;
+}
+
+.legal-callout {
+  margin: 1.3rem 0;
+  padding: 1rem 1.15rem;
+  background: rgba(143, 47, 27, 0.08);
+  border-left: 4px solid var(--accent);
+}
+
+.legal-contact {
+  font-style: normal;
+}
+
 @media (max-width: 900px) {
   :root {
     --book-gutter: clamp(44px, 7vw, 70px);
@@ -341,6 +449,20 @@ footer p {
   .development-copy,
   .buttons {
     max-width: 100%;
+  }
+
+  .legal-page {
+    background-attachment: scroll;
+  }
+
+  .legal-header {
+    padding: 0 14px;
+  }
+
+  .legal-document {
+    width: calc(100% - 20px);
+    margin: 18px auto;
+    padding: 28px 22px;
   }
 }
 
