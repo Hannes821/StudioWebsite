@@ -167,13 +167,10 @@ h2 {
   font-size: clamp(2.55rem, 4.2vw, 4.1rem);
 }
 
-.hero-subtitle {
-  margin: 14px 0 0;
-  color: var(--accent);
-  font-family: var(--display);
-  font-size: clamp(1.45rem, 2.5vw, 2.25rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+.title-era {
+  display: block;
+  font: inherit;
+  letter-spacing: inherit;
 }
 
 .hero-copy,
@@ -477,3 +474,8 @@ footer p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Shared studio identity in the landing page and legal headers. */
+.logo { display: inline-flex; align-items: center; gap: 12px; }
+.studio-emblem { display: block; width: 62px; height: 50px; flex: 0 0 auto; object-fit: contain; filter: drop-shadow(0 2px 3px #17100c80); }
+@media (max-width: 480px) { .logo { gap: 8px; } .studio-emblem { width: 46px; height: 38px; } }
