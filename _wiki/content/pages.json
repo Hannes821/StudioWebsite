@@ -1,6 +1,6 @@
 [
   {
-    "slug": "Index",
+    "slug": "index",
     "title": "Index",
     "group": "Overview",
     "summary": "The shared knowledge base for Castellum and Feldfeste Games.",
@@ -8,7 +8,7 @@
     "source": "Design documents and FF-OI-01 through FF-OI-17"
   },
   {
-    "slug": "Game Concept",
+    "slug": "spielidee",
     "title": "Game Concept",
     "group": "Game Design",
     "summary": "Castle building, logistics and medieval rule.",
@@ -16,7 +16,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Society & Economy",
+    "slug": "wirtschaft",
     "title": "Society & Economy",
     "group": "Game Design",
     "summary": "Popularity, Renown, resources and buildings.",
@@ -24,7 +24,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Warfare",
+    "slug": "kampf",
     "title": "Warfare",
     "group": "Game Design",
     "summary": "Engine version, architecture and combat concepts.",
@@ -32,7 +32,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Factions",
+    "slug": "fraktionen",
     "title": "Factions",
     "group": "Game Design",
     "summary": "Faction families, regional variants and individual houses.",
@@ -40,7 +40,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Names",
+    "slug": "namen",
     "title": "Names",
     "group": "Game Design",
     "summary": "Unit terms, character backgrounds and historical names.",
@@ -56,7 +56,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Gameplay Tags",
+    "slug": "tags",
     "title": "Gameplay Tags",
     "group": "Game Design",
     "summary": "Actor types, functional tags and technical references.",
@@ -64,7 +64,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Achievements & Steam",
+    "slug": "achievements",
     "title": "Achievements & Steam",
     "group": "Game Design",
     "summary": "69 achievement entries and their recorded implementation status.",
@@ -72,7 +72,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Milestones",
+    "slug": "meilensteine",
     "title": "Milestones",
     "group": "Game Design",
     "summary": "Target scope and differences between planning snapshots.",
@@ -80,7 +80,7 @@
     "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
   },
   {
-    "slug": "Technical Architecture",
+    "slug": "technik",
     "title": "Technical Architecture",
     "group": "Engineering",
     "summary": "Components, damage, buildings, materials and team workflows.",
@@ -88,7 +88,7 @@
     "source": "FF-OI-01 through FF-OI-17"
   },
   {
-    "slug": "Chat and Cheats",
+    "slug": "oi-01",
     "title": "Chat and Cheats",
     "group": "Operation Instructions",
     "summary": "Enter cheats in chat using `/`; `/testersrights` enables testing rights.",
@@ -96,7 +96,7 @@
     "source": "FF_OI_01_Cheats_Rev03.pdf · Rev 03"
   },
   {
-    "slug": "Materials",
+    "slug": "oi-02",
     "title": "Materials",
     "group": "Operation Instructions",
     "summary": "Reuse existing atlases and trimsheets.",
@@ -104,7 +104,7 @@
     "source": "FF_OI_02_MaterialCreation.pdf · Rev 01"
   },
   {
-    "slug": "Building Setup",
+    "slug": "oi-03",
     "title": "Building Setup",
     "group": "Operation Instructions",
     "summary": "IndividualTag connects the Blueprint to `DT_Objects_info`.",
@@ -112,7 +112,7 @@
     "source": "FF_OI_03_BuildingSetup_Rev02.pdf · Rev 02"
   },
   {
-    "slug": "Buildings Submenu",
+    "slug": "oi-04",
     "title": "Buildings Submenu",
     "group": "Operation Instructions",
     "summary": "`BP_Submenu_Buildings` contains Page Manager, MenuPage and index-aligned Pages.",
@@ -120,7 +120,7 @@
     "source": "FF_OI_04_SubmenuBuildingsWidget_Rev02.pdf · Rev 02"
   },
   {
-    "slug": "Installation of Dev Build",
+    "slug": "oi-05",
     "title": "Installation of Dev Build",
     "group": "Operation Instructions",
     "summary": "The development-build guide references the Castellum repository and UE 5.2.",
@@ -128,7 +128,7 @@
     "source": "FF_OI_05_Installing the Build.pdf · Rev 01"
   },
   {
-    "slug": "Claim Management",
+    "slug": "oi-06",
     "title": "Claim Management",
     "group": "Operation Instructions",
     "summary": "Claims are taken and assigned through Trello, then moved into personal WIP lists.",
@@ -136,7 +136,7 @@
     "source": "FF_OI_06_ClaimAdministration.pdf · Rev 01"
   },
   {
-    "slug": "Level Design",
+    "slug": "oi-07",
     "title": "Level Design",
     "group": "Operation Instructions",
     "summary": "Covers historical maps, regional biomes and the pipeline from geographic data through CloudCompare and DCC/heightmaps into Unreal.",
@@ -144,7 +144,7 @@
     "source": "FF_OI_07_ManualLevelDesign.pdf · Rev 01"
   },
   {
-    "slug": "Coding Best Practices",
+    "slug": "oi-08",
     "title": "Coding Best Practices",
     "group": "Operation Instructions",
     "summary": "Use small functions, reusable data structures, components and inheritance.",
@@ -152,7 +152,7 @@
     "source": "FF_OI_08_BestPracticesForCoding.pdf · Rev 01"
   },
   {
-    "slug": "Metahuman Characters",
+    "slug": "oi-09",
     "title": "Metahuman Characters",
     "group": "Operation Instructions",
     "summary": "Covers Metahuman export, Blender material preparation, baking, a shared UV map, skeleton and optimisation.",
@@ -160,7 +160,7 @@
     "source": "FF_OI_09_Metahuman Character Export.docx.pdf · Rev 01"
   },
   {
-    "slug": "Art Asset Pipeline",
+    "slug": "oi-10",
     "title": "Art Asset Pipeline",
     "group": "Operation Instructions",
     "summary": "The pipeline runs from idea and feasibility through agreed concept art to modelling, optimisation, baking and texturing.",
@@ -168,7 +168,7 @@
     "source": "FF_OI_10_ArtAssetPipeline.pdf · Rev 01"
   },
   {
-    "slug": "Damage System",
+    "slug": "oi-11",
     "title": "Damage System",
     "group": "Operation Instructions",
     "summary": "Damage type `CA_DamageType` is separate from delivery `E_CA_DamageDeliveryType`.",
@@ -176,7 +176,7 @@
     "source": "FF_OI_11_DamageSystem.pdf · Rev 01"
   },
   {
-    "slug": "Merging Branches",
+    "slug": "oi-12",
     "title": "Merging Branches",
     "group": "Operation Instructions",
     "summary": "Integrate Main into the working branch first, preserve intended changes, then compile and test in the editor.",
@@ -184,7 +184,7 @@
     "source": "FF_OI_12_MergingBranches.docx.pdf · Rev 01"
   },
   {
-    "slug": "UI Icons",
+    "slug": "oi-13",
     "title": "UI Icons",
     "group": "Operation Instructions",
     "summary": "Frame colours communicate roles: red military; orange siege/construction; blue agents/Church; light green civilians/domestic animals; dark green wildlife.",
@@ -192,7 +192,7 @@
     "source": "FF_OI_13_UserInterfaceIcons.docx.pdf · Rev 01"
   },
   {
-    "slug": "Virtual Runtime Textures",
+    "slug": "oi-14",
     "title": "Virtual Runtime Textures",
     "group": "Operation Instructions",
     "summary": "**Content mismatch:** Despite the Virtual Runtime Textures title, pages 2–4 contain UI icon instructions matching OI-13.",
@@ -200,7 +200,7 @@
     "source": "FF_OI_14_VirtualRuntimeTextures.docx.pdf · Rev 01"
   },
   {
-    "slug": "Online Systems",
+    "slug": "oi-15",
     "title": "Online Systems",
     "group": "Operation Instructions",
     "summary": "A short draft defining Unique Player Net ID.",
@@ -208,7 +208,7 @@
     "source": "FF_OI_15_OnlineSystems.docx.pdf · Rev 01"
   },
   {
-    "slug": "Time Management",
+    "slug": "oi-16",
     "title": "Time Management",
     "group": "Operation Instructions",
     "summary": "Describes calendar sharing, then-Friday team meetings and individual 1:1 meetings.",
@@ -216,7 +216,7 @@
     "source": "FF_OI_16_TimeManagement.docx.pdf · Rev 01"
   },
   {
-    "slug": "Attribute Components",
+    "slug": "oi-17",
     "title": "Attribute Components",
     "group": "Operation Instructions",
     "summary": "Abstract `BaseAttributeComponent` encapsulates Value, MaxValue, initialisation and optional regeneration.",
@@ -224,7 +224,7 @@
     "source": "FF_OI_17_AttributeComponents.pdf · Rev 01"
   },
   {
-    "slug": "Overview of OIs",
+    "slug": "operation-instructions",
     "title": "Overview of OIs",
     "group": "Engineering",
     "summary": "All 17 guides, with original documents and revision references.",
@@ -232,7 +232,7 @@
     "source": "Sources received 18 September 2026"
   },
   {
-    "slug": "Sources",
+    "slug": "quellen",
     "title": "Sources",
     "group": "Overview",
     "summary": "Original documents, snapshot dates and scope.",
@@ -240,7 +240,7 @@
     "source": "Sources received 18 September 2026"
   },
   {
-    "slug": "Contribute",
+    "slug": "mitarbeiten",
     "title": "Contribute",
     "group": "Overview",
     "summary": "Edit articles, preserve sources and track revisions.",
