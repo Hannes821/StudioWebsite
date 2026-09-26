@@ -1,9 +1,4 @@
-Castellum combines castle building, direct unit control, tactical field battles and sieges with economy, logistics, governance and a historical atmosphere around 1200.
+## About
 
-The older pitch proposes 30–60 minute matches and, in the longer term, single-player, co-op, multiplayer, a campaign, Quick Match, Ranked, a scenario editor and mods. This is the target scope of that pitch, not confirmation that all features are implemented.
+Castellum is a classic real-time strategy game with feudal economy, castle base building, and tactical warfare elements. Set in the High Middle Ages, around 1150–1250, the battlefield is dominated by feuds between neighbouring castle lords, who send their warbands into battle with a variety of weapons and tactics. Dominate through cultural influence, economic might, or simply besiege your rivals and force their surrender. Use unit strengths, terrain elevation, formations, and exhaustion to break your enemies’ morale. But be mindful of Church law and diplomacy! In matches lasting roughly 20 to 60 minutes with up to 4 players, will your banner be the one left flying over the keep?
 
-## Paths to success
-
-Military dominance is one design path alongside trade, diplomacy, cultural achievement, architecture and religious influence. Food, taxation, infrastructure, religion, security, terrain and weather are intended to matter.
-
-Sources: Game Design Pitch, slides 2 and 4–5; the older GDD. The pitch's “Early Medieval” wording differs from the current project context around 1200. Preserve that distinction when reusing older material.
