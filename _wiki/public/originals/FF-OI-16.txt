@@ -1,0 +1,198 @@
+## Page 1
+FF-OI-16:  “Time  Management” 
+Rev01
+  
+Feldfeste  Operation  Instruction  
+ 
+FF-OI-16:  “Time  Management”    
+Document  History   Revision  Content  Editor  Time  01  Initial  Document  Creation  Hannes  22.07.2026       
+Confidential  Operation  Instruction   
+
+
+## Page 2
+FF-OI-16:  “Time  Management” 
+Rev01
+   
+Table  of  Contents  1.  GmailCalendar  2.  Regular  Team  Meetings  3.  1:1  Meetings  
+    
+1.  Gmail  Calendar  
+1.1  open  your  Gmail  calendar:  
+  
+Confidential  Operation  Instruction   
+
+
+## Page 3
+FF-OI-16:  “Time  Management” 
+Rev01
+  1.2  now,  go  to  your  name  on  the  left,  and  click  on  the  settings  (3  dots),  then,  click  on  share.  
+ 1.3  here,  you  can  now  share  your  calendar  with  team  mates.  
+Confidential  Operation  Instruction   
+
+
+## Page 4
+FF-OI-16:  “Time  Management” 
+Rev01
+  
+ 1.4  Select  the  persons  to  share  with,  and  click  on  “send”.  
+Confidential  Operation  Instruction   
+
+
+## Page 5
+FF-OI-16:  “Time  Management” 
+Rev01
+  
+ 1.5  Add  meetings,  and  share  them.  
+Now,
+ 
+your
+ 
+specific
+ 
+schedule
+ 
+should
+ 
+look
+ 
+somewhat
+ 
+like
+ 
+this:
+ 
+ 1.6.  Example:  my  calendar  looks  like  this:  
+Confidential  Operation  Instruction   
+
+
+## Page 6
+FF-OI-16:  “Time  Management” 
+Rev01
+  
+  you  can  find  my  calender  here: https://calendar.google.com/calendar/embed?src=feldfeste%40gmail.com&ctz=Europe%2FBerlin         
+2.  Regular  Team  Meetings   Regular  Team  meetings  happen  friday  at  workdays  4  to  5  or  sometimes  6pm  of  central  
+european
+ 
+time.
+ 
+Also,
+ 
+notice,
+ 
+we
+ 
+have
+ 
+central
+ 
+european
+ 
+summer
+ 
+time,
+ 
+there
+ 
+is
+ 
+1
+ 
+hour
+ 
+of
+ 
+time
+ 
+shift
+ 
+between
+ 
+winter
+ 
+and
+ 
+summer.
+  Here  we  summarize  the  week’s  progress  from  the  last  week,  show  each  other,  gather  
+feedback
+ 
+and
+ 
+plan
+ 
+the
+ 
+tasks
+ 
+for
+ 
+the
+ 
+upcoming
+ 
+week.
+ 
+Also,
+ 
+we
+ 
+make
+ 
+decisions
+ 
+together.
+  
+3.  1:1  Meetings   Personal  topics  belong  into  the  1:1  meeting.  This  is  quasi  to  settle  individual  work  contract  
+details,
+ 
+current
+ 
+work
+ 
+circumstances
+ 
+and
+ 
+anything
+ 
+that
+ 
+is
+ 
+perhaps
+ 
+not
+ 
+interesting
+ 
+for
+ 
+the
+ 
+whole
+ 
+team.
+ 
+As
+ 
+it
+ 
+stands,
+ 
+the
+ 
+1:1
+ 
+can
+ 
+happen
+ 
+bi-weekly
+ 
+or
+ 
+once
+ 
+per
+ 
+month.
+ 
+Confidential  Operation  Instruction   

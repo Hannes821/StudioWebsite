@@ -1,0 +1,315 @@
+## Page 1
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+Feldfeste Operation Instruction 
+ 
+FF-OI-02: “Material Creation” 
+ 
+ 
+Document History 
+ 
+Revision Content Editor Time 
+01 Initial Document Creation Hannes 24.05.2026 
+    
+    
+  
+
+
+## Page 2
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+Table of Contents 
+1. Overview of Existing Material Atlasses 
+2. Process of Creating an Material Atlas/Trimsheets 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Purpose of this document 
+ 
+Targets:  
+● Reduce Draw calls.  
+● Reduce file size.  
+● Optimize performance. 
+ → use fewer material trimsheets, see what is re-useable and 
+make asset plan 
+ → we use vertex paint to include several trimsheets in a 
+single material 
+ 
+child prop trimsheet 03 must get planned out. 
+https://trello.com/c/EsRwpSjq/705-alpha-map-plant-wares-
+trimsheet03?search_id=f51e21c6-4bb2-4aae-bebe-357ba270c132 
+ 
+Plan out parent prop materials from existing trimsheets. 
+Any 3d Artist can use any of the existing prop trimsheets. 
+ 
+ 
+Terminology 
+ 
+Trim Sheet texture map with various, often tiling, textures, sometimes unique  
+  textures 
+ 
+Atlas  … 
+
+## Page 3
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+Vertex  … 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Overview of Existing Material Atlasses 
+ 
+M: CA_M_TownProps (T: CA_trimsheet_props01_D) [from left to right, top to bottom] 
+Creator: Jonathan (Gahmuret) 
+● processed wood   → used on: town props, bells 
+● cast black iron, rusty  → used on:  
+● pulverized Iron  → used on: IronOreBasket 
+● Coal     → used on: 
+● tree bark    → used on: tree stump, bark resource 
+● aged wood    → used on: 
+● leather    → used on: 
+● rough cut bright stone  → used on: 
+● iron ore    → used on: 
+
+## Page 4
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+ 
+ 
+ 
+ 
+M: CA_M_TownProps (T: CA_T_WeaponProps_d) [from left to right, top to bottom] 
+Creator: Jonathan (Gahmuret) 
+● Steel, including details  → used on: weapons, plates? 
+Furniture? 
+○ Buckler 
+○ sharp steel edge 
+○ sword 
+● brighter processed wood  → used on: weapons (shaft of spear etc) 
+● leather dark    → used on: shield (i guess?)  
+● bright leather   → used on: shield 
+
+
+## Page 5
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+● parchment    → used on: used for animal hide on 
+shields 
+    (fancy shields get wrapped in parchment) 
+● polished darker red wood:  → used on: (i dont know) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+## Page 6
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+ 
+ 
+M: CA_M_Props02 (T: CA_Trimsheet_Props02_d) [from left to right, top to bottom] 
+Creator: Jonathan (Gahmuret) 
+● Sack material → to be improved says jonathan 
+ 
+ 
+ 
+ 
+ 
+M: CA_M_Siege (T: Mat_Ca_SiegeWeapons_d) [from left to right, top to bottom] 
+
+
+## Page 7
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+Creator: Dominik Maral (Chuwak) 
+● rough wood  → used on: siege weapons, cart 
+● Steel rough  → used on: iron parts of siege weapons 
+● rope   → used on: ropes of siege engines 
+● leather dark  → used on: siege engines 
+● new leather  → used on: horse saddle (not yet in image, 
+wip) 
+ 
+ 
+ 
+
+
+## Page 8
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+ 
+ 
+ 
+
+
+## Page 9
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+overview of diffuse maps: 
+ 
+● cornerstone: for church archecture (and castles?) 
+● chruch glass x3 
+● tent 
+● church door relief 
+● art shack 
+● art shack roof 
+● church window 1 and 2 
+● floor tiles (main menu) x2 
+● coaler 
+● common house 
+● donkey mill 
+● hoardings /wall system 
+● limestone kiln 
+● log hut 
+● plaster (castle /church architecture) 
+● roof shingles (castle /church architecture) 
+● stone (Castle) 
+● straw (roof common houses) 
+● trimsheetProps01 
+● wheats D 
+● cheesy 
+● hoardings atlas (walls 
+● wood shingles shack roofs 
+●  
+ 
+
+
+## Page 10
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+Other Maps (might be optimized) 
+ 
+Scaffoldings 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+## Page 11
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+Arrows 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+and a lot of animals (that will me sorted out) 
+ 
+https://trello.com/c/EsRwpSjq/705-alpha-map-plant-wares-
+trimsheet03?search_id=da118d8d-5569-465f-8cd9-275475878005 
+ 
+ 
+ 
+
+
+## Page 12
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+Currently Open Assets: 
+Brazier (coal pan for wall defenses)  
+a. steel 
+b. ashes / coal 
+c. glowing ashes / coal (fire comes from fx) 
+ 
+Ammunition Barrel (Arrows, Bolts, javelins) (Hannes in editor)✅ 
+d. existing town props barrel 
+e. existing weapon props  
+ 
+ 
+Campfire for siege camp (almost done by chuwak) 
+f. coals /ashes 
+g. glowing coals ashes 
+ 
+ 
+Some weapon racks for siege camp/ tournament place 
+h. wood material 
+ 
+Horse /ox cart (almost done by chuwak, using siege material) ✅ 
+ 
+Market stands (tasked for chuwak) 
+ 
+props for the clay pit, and the clay pit (chuwak) 
+ 
+
+
+## Page 13
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+smelter oven (to be put inside the forge) (chuwak) 
+ 
+tournament place props: archer targets 
+https://trello.com/c/Fpv7urhJ/949-archer-butt-mound 
+ 
+ 
+construction destruction props (tools, rope lines etc) 
+→ use the siege materials? 
+ 
+ 
+https://trello.com/c/BxrnyO84/692-props-for-construction-destruction-
+stages-ropes-tools 
+ 
+table or furniture for MM and in front tavern, butchery, cheesery, vinery and 
+such 
+(medieval furniture) 
+
+
+## Page 14
+FF-OI-02: “Material Creation” Rev01 
+ 
+Confidential Operation Instruction  
+ 

@@ -1,0 +1,20 @@
+## Page 1
+FF-OI-15:  “Online  Systems” 
+Rev01
+  
+Feldfeste  Operation  Instruction  
+ 
+FF-OI-15:  “Online  Systems”    
+Document  History   Revision  Content  Editor  Time  01  Initial  Document  Creation  Harshad  09.07.2026       
+Confidential  Operation  Instruction   
+
+
+## Page 2
+FF-OI-15:  “Online  Systems” 
+Rev01
+   
+Table  of  Contents  1.  Unique  Player  Net  ID  2.  Advanced  Sessions  Plugin  3.  Network  Traﬃc  &  Syncing  inputs    
+    
+1.  Unique  Player  Net  ID  
+ A  unique  identifier  assigned  to  a  player  by  the  online  subsystem  (e.g.  Steam).   
+Confidential  Operation  Instruction   

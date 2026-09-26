@@ -1,0 +1,439 @@
+## Page 1
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+Feldfeste Operation Instruction 
+ 
+FF-OI-07: “Manual Level Design” 
+ 
+ 
+Document History 
+ 
+Revision Content Editor Time 
+01 Initial Document Creation Hannes 15.06.2026 
+    
+  
+
+
+## Page 2
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+Contents 
+FF-OI-07: “Manual Level Design” ................................ ................................ ....................... 1 
+Document History ................................ ................................ ................................ .............. 1 
+1. Overview and Purpose ................................ ................................ ................................ .. 2 
+2. Heightmap Creation ................................ ................................ ................................ ....... 6 
+3. Level Boundaries ................................ ................................ ................................ ..... 12 
+4. World Fog ................................ ................................ ................................ ................ 15 
+5. Apply Auto Material ................................ ................................ ................................ ..... 16 
+6. Place Trees ................................ ................................ ................................ ................. 16 
+7. Place Rock Boulders ................................ ................................ ................................ ... 17 
+8. Place Water Plane underneath Landscape ................................ ................................ .. 17 
+9. Create Navmesh................................ ................................ ................................ .......... 17 
+10. Tweak UltraDynamic Skies & Weather ................................ ................................ ...... 18 
+11. Placing Encounter Animals ................................ ................................ ........................ 18 
+12. Placing Player Start Camps ................................ ................................ ....................... 18 
+13. Placing NPC camps ................................ ................................ ................................ ... 18 
+14. Placing traveler spawners ................................ ................................ .......................... 18 
+15. Setting up Birds ................................ ................................ ................................ ......... 18 
+Set up Level Blueprint ................................ ................................ ................................ ..... 20 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Overview and Purpose 
+This guide is supposed to be a quick reference for any level designer in our team to build 
+levels. Just follow the Scheme and you should be fine. As this is a work in progress, details 
+will be updated and added. For any feedback and questions, please directly target our discord 
+channel for level design questions! 
+ 
+The Maps we create for Castle Age share the following characteristics: 
+
+## Page 3
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+● real-world reference (use geodata as a base) 
+● relatively small, just a few square kilometers 
+● mostly around historic areas of interest like castles or battle fields 
+● trying to emulate nature in the environment 
+● trying to re-create a “naturalistic” appearance 
+● using one of the specific biomes we plan: 
+○ north european grassland (flat, swampy) 
+https://trello.com/c/jQYtemRc/482-northern-swamp-biome-weather-picked-
+custom-maps-flatlands 
+ 
+ 
+○ west-european atlantic coast (cliffs, beach, gras) 
+https://trello.com/c/um914wFR/815-western-atlantic-coast-biome-weather-
+custom-maps-normandy 
+ 
+○ Middle-European mid-mountain forests  
+https://trello.com/c/YsLZ77z9/480-middle-range-mountains-blackforest-
+thuringian-forest-bavarian-forest-erzgebirge-etc-weather-maps 
+(blackforest, france, bohemian forest, bavarian forest, thuringian forest etc) 
+ 
+ 
+○ Alpine Biome  
+https://trello.com/c/8NeOquUe/816-alpine-biome-weather-custom-maps 
+
+
+## Page 4
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+○ Western mediterranean: (Italy, Iberia) 
+https://trello.com/c/lFZRKCkJ/481-mediterranian-biome-weather-maps 
+ 
+ 
+○ [DLC] mediterranean coast (cliffs, beach, subtropical) [greek isles] 
+https://trello.com/c/99ySlJC1/504-east-mediterranian-biome-greek-isles-
+weather-maps-animals 
+ 
+ 
+○ [DLC] AnatoliaPersia 
+https://trello.com/c/lOhRsjjU/487-oriental-biome-anatolia-persia-weather-
+maps-animals 
+ 
+ 
+
+
+## Page 5
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+○ [DLC] Mongol Steppe 
+https://trello.com/c/iJqUcM1u/493-desert-and-steppe-biome-weather-maps-
+animals 
+ 
+ 
+○ [DLC] North Africa 
+ 
+https://trello.com/c/C7a1y4Ji/498-north-african-biome-animals-maps-weather 
+ 
+○ [DLC] Middle East /Holy Land  
+ 
+● Each of these have their regional: 
+○ Weathers 
+○ Animal Encounters 
+○ Terrain Textures 
+○ Foliage (Bushes, Grass) 
+○ Trees 
+○ Rocks 
+ 
+Overview of the Workflow 
+ 
+• https://docs.unrealengine.com/4.27/en-US/BuildingWorlds/Landscape/Creation/ 
+• Create Landscape 
+• Apply Material 
+• Check that layer info is correct 
+• Landscape Edit Layers in Unreal Engine 
+• https://docs.unrealengine.com/4.27/en-
+US/BuildingWorlds/Landscape/Editing/SculptMode/Blueprint/ 
+• ( Voxel Plugin ) can do real-time editing of landscape (not required) (Brushes for siege 
+impacts? Destroyable terrain?) 
+ 
+
+
+## Page 6
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+2. Heightmap Creation 
+ 
+• Data Sources:  
+• Extract 3d Data from Online Maps 
+• Outside UE:  
+• Polish and fit Map Data 
+• Export in Texture Formate 
+• Inside UE: 
+• Import in Unreal Engine 
+• Final Tweaks in Unreal Engine 
+ 
+1.  get XYZ-file of the region  
+2.  import to CloudCompare (freeware)  
+3.  export mesh from cloudcompare  
+4.  import mesh in 3dsMax  
+5.  texture with gradient and render top view with 16bit  
+6.  use generated height map in Unreal as landscape 
+ 
+ 
+ 
+ 
+1.1 Extract 3d Data from Online Maps 
+ 
+1. Sachsen (in the game the Saxon eastern marches, mostly Meißen, Zeitz, Lausitz etc.) 
+https://www.geodaten.sachsen.de/downloadbereich-digitale-hoehenmodelle-4851.html  
+2. Bayern ( part of Herzogtum Bayern and Nordmark) 
+https://geodaten.bayern.de/opengeodata/OpenDataDetail.html?pn=dgm1  
+
+
+## Page 7
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+3. Thüringen (Thüringen) https://www.geoportal-th.de/de-de/Downloadbereiche/Download-
+Offene-Geodaten-Th%C3%BCringen/Download-H%C3%B6hendaten  
+4. Niedersachsen (in the game part of Herzogtum Sachsen) 
+https://opengeodata.lgln.niedersachsen.de/#bdlm  
+5. Tyrol (part of Bavarian eastern marches, Austria) 
+https://maps.civis.bz.it/#/?context=PROV-BZ-MONUMENT-
+ARCHAEOLOGY&lang=de&bbox=1275156.6904,5923073.1162,1275297.7807,5923216
+.8152  
+6. Baden-Würtemberg (in the game part of Herzogtum Schwaben) https://www.geoportal-
+bw.de/#/(sidenav:menu)  
+7. Schweiz (part of Herzogtum Schwaben in the game) 
+https://www.geo.admin.ch/de/geodatenmodelle 
+8. Netherlands (not sure) 
+https://data.overheid.nl/datasets?facet_theme%5B0%5D=http%3A//standaarden.overhei
+d.nl/owms/terms/Natuur_en_milieu  
+9. Paris (not sure) https://opendata.paris.fr/pages/home/  
+10. France (need to investigate further) https://opendata.paris.fr/pages/home/  
+11. Italy (here Bologna example) https://www.dati.gov.it/view-
+dataset?groups=ambiente&organization=comune-di-bologna  
+12. Tuscany (Herzogtum Toskana in the game) https://www.regione.toscana.it/-/open-
+geodata  
+13. Flanders/Belgium https://www.geo.be/home?l=de  
+14. Spain https://datos.gob.es/en  
+15. Normandy (Herzogtum Normandie in the game) 
+https://data.maptiler.com/downloads/europe/france/basse-normandie/  
+16. maybe this tool can help with many places: https://data.maptiler.com/downloads/europe/ 
+ 
+ 
+1.2 Optional Polish outside the Editor 
+• Gaea 
+Problem of costs/ License 
+• https://quadspinner.com/Download 
+
+## Page 8
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+● CloudCompare 
+● https://www.danielgm.net/cc/ 
+● https://www.youtube.com/watch?v=jEQ93GIEJY8 
+ 
+ 
+
+
+## Page 9
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+ 
+Setting up different layers for the same height map  
+(i didnt get this to work yet) 
+• Multilayer example from Zachary, 
+a picture per layer. 
+• I want only height info, layers are auto-created! 
+🡪 one layer is sufficient! 
+
+
+## Page 10
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+ 
+ 
+BLENDER BAKE 
+
+
+## Page 11
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+• https://devforum.roblox.com/t/using-blender-to-generate-properly-scaled-heightmaps-
+from-a-mesh/382209 
+• Imported mesh into blender 
+1. and there you can click on "BAKE" 
+2. but i got the error of "no active UV layer found in the object" 
+ 
+using Geodata and displacement in Blender 
+• HTTPS://Heightmap.Skydark.Pl/ 
+• https://youtu.be/uHFSAnPgsEA?si=1MOg1Jw2wmqhWoMC 
+• PNG download 
+• Blender:  
+• renderer Cycles, Auflösung runter 
+• Create plane 
+• Subdivide 
+• Shading/ plane /neues material (hat displacement) strg+T 
+• Ins colour rein /material einstellungen /displacement and bumb 
+• Skalierung anpassen 
+ 
+TerrainMagic 
+• https://www.youtube.com/watch?v=HD2OIIUOmLA 
+•  
+1.3 Import Heightmap Data into UNREAL 
+https://docs.unrealengine.com/4.27/en-US/BuildingWorlds/Landscape/aq/ 
+ 
+• https://docs.unrealengine.com/4.27/en-US/BuildingWorlds/Landscape/Custom/ 
+„Landscape layers can be imported from external programs via implementation of the 
+ILandscapeHeightmapFileFormat and ILandscapeWeightmapFileFormat interfaces. The 
+editor's existing support for image-based importing has been converted to use this 
+interface and is fully supported. Images for the built-in formats are still required to be 
+
+
+## Page 12
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+grayscale, 8 bits per pixel, single channel files in either .PNG or .RAW format. If you are 
+creating layers in Photoshop, use the following settings when creating a new document:“ 
+• Heightmap Formats: When exporting heightmaps from external programs, only the 
+following formats are usable inside UE4. 16-bit, grayscale PNG file 16-bit, grayscale 
+RAW file in little-endian byte order 
+ 
+ 
+ 
+2. Polish Heightmap 
+height edits: create reasonable planes, valleys and mountains 
+auto material tweaks: make sure transition slopes between materials are good 
+create a visual barrier if possible 
+ 
+3. Level Boundaries 
+dont let the camera or units run out! 
+Use a different perspective in viewport also helps. 
+
+
+## Page 13
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+
+
+## Page 14
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+
+
+## Page 15
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+4. World Fog 
+additional visual barrier to the sides. gentle but effectful. 
+ 
+
+
+## Page 16
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+5. Apply Auto Material 
+Now we can see how material transition slopes happen. Perhaps some manual painting for 
+specific tactical placemennt or historical places is necessary. 
+ 
+6. Place Trees 
+ 
+
+
+## Page 17
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+7. Place Rock Boulders 
+ 
+8. Place Water Plane underneath Landscape 
+ 
+ 
+9. Create Navmesh 
+Steps to Generate NavMesh 
+1. Add Volume: Go to the Place Actors panel (Window > Place Actors), search for "Nav 
+Mesh Bounds Volume", and drag it into the level. 
+2. Scale Volume: Scale the volume to encompass all areas where AI should walk. 
+3. Visualize: Press the P key on your keyboard to toggle the green visualization of the 
+NavMesh. 
+4. Automatic Build: Unreal automatically generates (bakes) the mesh within this volume 
+immediately upon adding it.  
+This video demonstrates how to add and scale a NavMesh Bounds Volume: 
+ZenvaYouTube• 20.11.2022 
+Key Configuration Settings (Project Settings > Navigation Mesh)  
+● Agent Radius/Height: Defines the size of the AI characters. 
+● Agent Max Slope: Sets the maximum steepness the AI can walk. 
+● Max Step Height: Dictates the height of obstacles the AI can step over. 
+● Runtime Generation: Set to "Dynamic" to update the navmesh during gameplay, or 
+"Static" for bake-only.  
+ 
+You can watch this video to see how to configure the NavMesh settings: 
+underscoreYouTube• 17.03.2022 
+Pro Tips 
+● Dynamic Navigation: For procedural levels, set Runtime Generation to "Dynamic" 
+and use Navigation Invokers to generate mesh around players only. 
+● Modifiers: Use Nav Modifier Volumes to mark areas as dangerous or blocked. 
+● Auto Link Generation: In UE 5.5+, you can enable "generate nav links" in the Recast 
+NavMesh settings to automatically create jumping/falling links for AI.  
+
+
+## Page 18
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+●  
+This video explains how to create dynamic navmesh with navigation invokers: 
+GamingDev2020YouTube• 04.09.2023 
+  
+  
+ 
+ 
+10. Tweak UltraDynamic Skies & Weather 
+https://www.youtube.com/watch?v=ENMuqbNSLTs  
+Ultra Dynamic Sky - Product Video + Quick Start (Newest UE5 Version) 
+ 
+ 
+11. Placing Encounter Animals 
+● place encounter units or spawners 
+● place walking nodes 
+● confirm that enemy tags and so on are correctly set up 
+12. Placing Player Start Camps 
+● place encounter units or spawners 
+13. Placing NPC camps 
+● place encounter units or spawners 
+14. Placing traveler spawners 
+● place encounter units or spawners 
+15. Setting up Birds 
+● place BP_CrowSpline in level 
+● place NS_SplineFlock in level 
+● move the Flock in object window under the spline 
+● adjust the settings for the Flock, adjust the spline points in the spline 
+ 
+
+## Page 19
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+ 
+
+
+## Page 20
+FF-OI-07: “Manual Level Design” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+ 
+Set up Level Blueprint 
+we will try to handle this somewhere else. 
+ 

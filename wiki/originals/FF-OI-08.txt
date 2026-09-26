@@ -1,0 +1,68 @@
+## Page 1
+FF-OI-08: “ Best Practices for Coding” Rev01 
+ 
+Confidential Operation Instruction  
+Feldfeste Operation Instruction 
+ 
+FF-OI-05: “Best Practices for Coding” 
+ 
+ 
+Document History 
+ 
+Revision Content Editor Time 
+01 Initial Document Creation Hannes 15.06.2026 
+    
+  
+
+
+## Page 2
+FF-OI-08: “ Best Practices for Coding” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+Table of Contents 
+ 
+ 
+ 
+ 
+ 
+1. Naming Conventions 
+There is a definition: 
+https://docs.google.com/spreadsheets/d/1ckDVI6lmOhuaO0jR66sjA-nBx6cu-
+qQ1peZLevrGfek/edit?gid=921324652#gid=921324652 
+ 
+It follows the general UNREAL engine conventions. 
+https://dev.epicgames.com/documentation/unreal-engine/recommended-asset-naming-
+conventions-in-unreal-engine-projects 
+ 
+2. File Locations 
+CA_Code / Blueprints / Unit Actors → units and so on. 
+ 
+3. General Knowledge 
+Reference:  
+https://dev.epicgames.com/documentation/unreal-engine/blueprint-best-practices-in-unreal-
+engine 
+ 
+Modularity 
+ 
+1. Use small functions. 
+a. Readability 
+b. Interchangeability 
+c. Fixability 
+d. Testability 
+2. Call subfunctions from main function sequentially. 
+ 
+
+## Page 3
+FF-OI-08: “ Best Practices for Coding” Rev01 
+ 
+Confidential Operation Instruction  
+Avoid Duplicates 
+Use data structures instead, like data tables, arrays, maps. Refactoring! 
+ 
+Avoid Super Classes  
+Solid, responsible Data. Use inheritance, use components. 
+ 
+Avoid static communication with hard references 
+Use Delegates /event Dispatchers if you don’t have to use a hard reference. 
+ 

@@ -1,0 +1,69 @@
+## Page 1
+FF-OI-06: “Claim Administration” Rev01 
+ 
+Confidential Operation Instruction  
+Feldfeste Operation Instruction 
+ 
+FF-OI-06: “Claim Administration” 
+ 
+ 
+Document History 
+ 
+Revision Content Editor Time 
+01 Initial Document Creation Hannes 15.06.2026 
+    
+  
+
+
+## Page 2
+FF-OI-06: “Claim Administration” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+Table of Contents 
+1. Gain Access 
+2. Discuss Claims Details 
+3. Submission of Work 
+4. Review & Completion 
+ 
+ 
+ 
+ 
+ 
+1. Gain Access 
+The Management Board is being stored at Trello: 
+https://trello.com/b/k4e2XoqY/ca-imp 
+ 
+provide your work email address. 
+1. Get added by the admin to the repository as collaborator; 
+2. Confirm that you can access it. 
+3. Make yourself familiar with the structure: 
+a. Personal “Work in progress” piles left, Milestone piles right 
+2. Discuss Details of a Claim 
+Taking over a claim (work package) is indicated by moving a card from any milestone pile to 
+your personal “wip” pile. Additionally, add your avatar /get your avatar added on the card, and 
+make sure it has the tags for the current (and following necessary) work stages. 
+Before starting hands -on, make s ure you d iscussed boundary conditions and details 
+sufficiently with the Trello admin (claim manager) and the artist/develo per of the follow -up 
+stages. This is to ensure that we have little to no “after work fixes ”. Attached links, f iles, 
+checklists might help you, also you are invited t o discuss details on discord with the team to 
+support you and gain maximum efficiency. 
+ 
+3. Submission of work 
+When you think you are done, send the files via discord or gdrive or git push to the admin. 
+Then, the card will be moved from your “Work in Progress” pile to the “Review” pile.  
+ 
+ 
+
+## Page 3
+FF-OI-06: “Claim Administration” Rev01 
+ 
+Confidential Operation Instruction  
+4. Submission of work 
+Now, the Admin should give you decent feedback within the next days, to decide if it was 
+completed or if there are further fixes required. If p ayment per claim was agreed on, a 
+completed claim means that you can expect the payment. (see the asset purchase contract 
+for details). The card is moved to the “Done” pile for documentation. 
+ 
+Now you are ready for the next claim. 
+ 

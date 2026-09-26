@@ -1,0 +1,144 @@
+## Page 1
+FF-OI-14:  “Virtual  Runtime  Textures” 
+Rev01
+  
+Feldfeste  Operation  Instruction  
+ 
+FF-OI-14:  “Virtual  Runtime  Textures”    
+Document  History   Revision  Content  Editor  Time  01  Initial  Document  Creation  Mert  08.07.2026       
+Confidential  Operation  Instruction   
+
+
+## Page 2
+FF-OI-14:  “Virtual  Runtime  Textures” 
+Rev01
+   
+Table  of  Contents  1.  Units  2.  Buildings  3.  Resources  4.  Actions  
+    
+1.  Units  
+General  Concept:  By  looking  at  the  coloured  frame  of  an  icon,  the  player  understands  the  
+purpose
+ 
+of
+ 
+the
+ 
+unit
+ 
+immediately.
+ 
+Red
+ 
+is
+ 
+military,
+ 
+Orange
+ 
+a
+ 
+construction
+ 
+(siege
+ 
+engine),
+ 
+blue
+ 
+is
+ 
+special
+ 
+/
+ 
+church,
+ 
+light
+ 
+green
+ 
+is
+ 
+civil,
+ 
+light
+ 
+green
+ 
+without
+ 
+fancy
+ 
+patterns
+ 
+is
+ 
+domestic
+ 
+animal
+ 
+dark
+ 
+green
+ 
+without
+ 
+fancy
+ 
+patterns
+ 
+is
+ 
+animal.
+ 
+Castle
+ 
+Lord
+ 
+has
+ 
+some
+ 
+traces
+ 
+of
+ 
+gold
+ 
+in
+ 
+the
+ 
+pattern.
+  
+   Outer  Ring:  Primary  Colour:  Here  red.  (should  be  blue,  as  “master  class”  =  agent)  
+Confidential  Operation  Instruction   
+
+
+## Page 3
+FF-OI-14:  “Virtual  Runtime  Textures” 
+Rev01
+  Inner  Ring:  Secondary  Colour:  here  blue  (should  be  red,  as  “subclass”  =  Warrior)   Agents:  Blue  Border  +  Red  for  “military”  or  +  Green  for  “civil”  ●  Monk   Full  Blue  (not  civil,  not  military)  ●  Merchant  outer;  Blue,  inner;  green  ●  Bandit   outer;  Blue,  inner;  Red  ●  Captain  outer;  Blue,  inner;  Red  ●  Bard   outer;  Blue,  inner;  green  ●  Engineer  outer;  Blue,  inner;  Orange  (SIEGE  !)  ●  Castle  Lord  outer;  Blue,  inner;  Red  (gold  accents  allowed)   
+Civil
+ 
+Units:
+ 
+Full
+ 
+Green
+ 
+Border
+ ●  Villager  &  variations  full  Green  ●  Kids,  civilians    full  Green  ●  Ox  cart    full  Green;  subtle  details  consistent  with  other  animal  borders  ●  Horse  Cart   full  Green;  subtle  details  consistent  with  other  animal  borders  ●  Domestic  Animals  full  Green;  subtle  details  consistent  with  other  animal  borders   Military:  Full  Red  Border    peasant  militia  can  have  an  inner  green  border  ●  Maceman    ●  Archer     ●  Crossbow    ●  Man-At-Arms    ●  Spearman    ●  Skirmisher    ●  Bardycheman     Siege  Works:  Orange,  full  orange  when  not  manned,  Orange  with  red  when  
+operational
+ 
+ ●  Siege  tower    Full  orange  &  Orange/red  version  ●  battering  ram    Full  orange  &  Orange/red  version  ●  storm  ladder    Full  orange  &  Orange/red  version  ●  storm  shield    Full  orange  &  Orange/red  version  ●  counterweight  trebuchet  Full  orange  &  Orange/red  version  ●  traction  trebuchet   Full  orange  &  Orange/red  version   Wild  Animals:  Full  Dark  Green,  very  subtle  pattern  (less  fancy  than  human!)   ●  Deer  ●  Stag  ●  Wolf  ●  Wisent  ●  Elk  ●  Boar  ●  Bear  ●  …  
+ 
+Confidential  Operation  Instruction   
+
+
+## Page 4
+FF-OI-14:  “Virtual  Runtime  Textures” 
+Rev01
+  
+2.  Buildings   3.  Resources   4.  Actions   
+Confidential  Operation  Instruction   

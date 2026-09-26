@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "index",
+    "title": "Knowledge that builds our game.",
+    "group": "Overview",
+    "summary": "The shared knowledge base for Castellum and Feldfeste Games.",
+    "status": "Source snapshot",
+    "source": "Design documents and FF-OI-01 through FF-OI-17"
+  },
+  {
+    "slug": "spielidee",
+    "title": "Game vision",
+    "group": "Game Design",
+    "summary": "Castle building, logistics and medieval rule.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "wirtschaft",
+    "title": "Society & economy",
+    "group": "Game Design",
+    "summary": "Popularity, Renown, resources and buildings.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "kampf",
+    "title": "Combat & technical foundations",
+    "group": "Game Design",
+    "summary": "Engine version, architecture and combat concepts.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "fraktionen",
+    "title": "Factions & cultures",
+    "group": "Game Design",
+    "summary": "Faction families, regional variants and individual houses.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "namen",
+    "title": "Names & Latin terminology",
+    "group": "Game Design",
+    "summary": "Unit terms, character backgrounds and historical names.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "sprache",
+    "title": "Language & audio",
+    "group": "Game Design",
+    "summary": "Historical unit speech and modern player notifications.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "tags",
+    "title": "Gameplay Tags",
+    "group": "Game Design",
+    "summary": "Actor types, functional tags and technical references.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "achievements",
+    "title": "Achievements & Steam",
+    "group": "Game Design",
+    "summary": "69 achievement entries and their recorded implementation status.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "meilensteine",
+    "title": "Milestones",
+    "group": "Game Design",
+    "summary": "Target scope and differences between planning snapshots.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "healthbar",
+    "title": "Healthbar & selection",
+    "group": "Game Design",
+    "summary": "Open emission check and related selection tasks.",
+    "status": "Source snapshot",
+    "source": "CA_DevSheet, VoiceLines, Pitch, Developer Overview and Trello export"
+  },
+  {
+    "slug": "technik",
+    "title": "Technical architecture",
+    "group": "Engineering",
+    "summary": "Components, damage, buildings, materials and team workflows.",
+    "status": "Source snapshot",
+    "source": "FF-OI-01 through FF-OI-17"
+  },
+  {
+    "slug": "klaerungen",
+    "title": "Open questions",
+    "group": "Overview",
+    "summary": "Incomplete guides, conflicting descriptions and pending checks.",
+    "status": "Review needed",
+    "source": "Sources received 18 September 2026"
+  },
+  {
+    "slug": "oi-01",
+    "title": "FF-OI-01 · Cheats for QA Testing",
+    "group": "Operation Instructions",
+    "summary": "Enter cheats in chat using `/`; `/testersrights` enables testing rights.",
+    "status": "Source snapshot",
+    "source": "FF_OI_01_Cheats_Rev03.pdf · Rev 03"
+  },
+  {
+    "slug": "oi-02",
+    "title": "FF-OI-02 · Material Creation",
+    "group": "Operation Instructions",
+    "summary": "Reuse existing atlases and trimsheets.",
+    "status": "Source snapshot",
+    "source": "FF_OI_02_MaterialCreation.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-03",
+    "title": "FF-OI-03 · Building Setup",
+    "group": "Operation Instructions",
+    "summary": "IndividualTag connects the Blueprint to `DT_Objects_info`.",
+    "status": "Source snapshot",
+    "source": "FF_OI_03_BuildingSetup_Rev02.pdf · Rev 02"
+  },
+  {
+    "slug": "oi-04",
+    "title": "FF-OI-04 · Submenu Buildings Widget",
+    "group": "Operation Instructions",
+    "summary": "`BP_Submenu_Buildings` contains Page Manager, MenuPage and index-aligned Pages.",
+    "status": "Source snapshot",
+    "source": "FF_OI_04_SubmenuBuildingsWidget_Rev02.pdf · Rev 02"
+  },
+  {
+    "slug": "oi-05",
+    "title": "FF-OI-05 · Installing the Development Build",
+    "group": "Operation Instructions",
+    "summary": "The development-build guide references the Castellum repository and UE 5.2.",
+    "status": "Review needed",
+    "source": "FF_OI_05_Installing the Build.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-06",
+    "title": "FF-OI-06 · Claim Administration",
+    "group": "Operation Instructions",
+    "summary": "Claims are taken and assigned through Trello, then moved into personal WIP lists.",
+    "status": "Source snapshot",
+    "source": "FF_OI_06_ClaimAdministration.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-07",
+    "title": "FF-OI-07 · Manual Level Design",
+    "group": "Operation Instructions",
+    "summary": "Covers historical maps, regional biomes and the pipeline from geographic data through CloudCompare and DCC/heightmaps into Unreal.",
+    "status": "Review needed",
+    "source": "FF_OI_07_ManualLevelDesign.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-08",
+    "title": "FF-OI-08 · Best Practices for Coding",
+    "group": "Operation Instructions",
+    "summary": "Use small functions, reusable data structures, components and inheritance.",
+    "status": "Source snapshot",
+    "source": "FF_OI_08_BestPracticesForCoding.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-09",
+    "title": "FF-OI-09 · Metahuman Character Export",
+    "group": "Operation Instructions",
+    "summary": "Covers Metahuman export, Blender material preparation, baking, a shared UV map, skeleton and optimisation.",
+    "status": "Source snapshot",
+    "source": "FF_OI_09_Metahuman Character Export.docx.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-10",
+    "title": "FF-OI-10 · Art Asset Pipeline",
+    "group": "Operation Instructions",
+    "summary": "The pipeline runs from idea and feasibility through agreed concept art to modelling, optimisation, baking and texturing.",
+    "status": "Source snapshot",
+    "source": "FF_OI_10_ArtAssetPipeline.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-11",
+    "title": "FF-OI-11 · Damage System",
+    "group": "Operation Instructions",
+    "summary": "Damage type `CA_DamageType` is separate from delivery `E_CA_DamageDeliveryType`.",
+    "status": "Review needed",
+    "source": "FF_OI_11_DamageSystem.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-12",
+    "title": "FF-OI-12 · Merging Branches",
+    "group": "Operation Instructions",
+    "summary": "Integrate Main into the working branch first, preserve intended changes, then compile and test in the editor.",
+    "status": "Source snapshot",
+    "source": "FF_OI_12_MergingBranches.docx.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-13",
+    "title": "FF-OI-13 · User Interface Icons",
+    "group": "Operation Instructions",
+    "summary": "Frame colours communicate roles: red military; orange siege/construction; blue agents/Church; light green civilians/domestic animals; dark green wildlife.",
+    "status": "Review needed",
+    "source": "FF_OI_13_UserInterfaceIcons.docx.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-14",
+    "title": "FF-OI-14 · Virtual Runtime Textures",
+    "group": "Operation Instructions",
+    "summary": "**Content mismatch:** Despite the Virtual Runtime Textures title, pages 2–4 contain UI icon instructions matching OI-13.",
+    "status": "Correction needed",
+    "source": "FF_OI_14_VirtualRuntimeTextures.docx.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-15",
+    "title": "FF-OI-15 · Online Systems",
+    "group": "Operation Instructions",
+    "summary": "A short draft defining Unique Player Net ID.",
+    "status": "Review needed",
+    "source": "FF_OI_15_OnlineSystems.docx.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-16",
+    "title": "FF-OI-16 · Time Management",
+    "group": "Operation Instructions",
+    "summary": "Describes calendar sharing, then-Friday team meetings and individual 1:1 meetings.",
+    "status": "Source snapshot",
+    "source": "FF_OI_16_TimeManagement.docx.pdf · Rev 01"
+  },
+  {
+    "slug": "oi-17",
+    "title": "FF-OI-17 · Attribute Components",
+    "group": "Operation Instructions",
+    "summary": "Abstract `BaseAttributeComponent` encapsulates Value, MaxValue, initialisation and optional regeneration.",
+    "status": "Source snapshot",
+    "source": "FF_OI_17_AttributeComponents.pdf · Rev 01"
+  },
+  {
+    "slug": "operation-instructions",
+    "title": "Operation Instructions",
+    "group": "Engineering",
+    "summary": "All 17 guides, with original documents and revision references.",
+    "status": "Source snapshot",
+    "source": "Sources received 18 September 2026"
+  },
+  {
+    "slug": "quellen",
+    "title": "Source register",
+    "group": "Overview",
+    "summary": "Original documents, snapshot dates and scope.",
+    "status": "Source snapshot",
+    "source": "Sources received 18 September 2026"
+  },
+  {
+    "slug": "mitarbeiten",
+    "title": "Contribute to the wiki",
+    "group": "Overview",
+    "summary": "Edit articles, preserve sources and track revisions.",
+    "status": "Prepared",
+    "source": "Sources received 18 September 2026"
+  }
+]

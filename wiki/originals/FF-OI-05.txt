@@ -1,0 +1,71 @@
+## Page 1
+FF-OI-05: “Installing the Development Build” Rev01 
+ 
+Confidential Operation Instruction  
+Feldfeste Operation Instruction 
+ 
+FF-OI-05: “Installing the Development Build” 
+ 
+ 
+Document History 
+ 
+Revision Content Editor Time 
+01 Initial Document Creation Hannes 15.06.2026 
+    
+  
+
+
+## Page 2
+FF-OI-05: “Installing the Development Build” Rev01 
+ 
+Confidential Operation Instruction  
+ 
+Table of Contents 
+1. Gain Access 
+2. Install Plugins 
+3. Compile Build 
+4. Start & Test 
+ 
+ 
+ 
+ 
+ 
+1. Gain Access 
+The Development Build is being stored at Github: 
+https://github.com/Hannes821/Castellum 
+ 
+provide your work email address. 
+1. Get added by the admin to the repository as collaborator; 
+2. Clone that build either via “download ZIP” or “clone” to your git desktop or any other 
+fetching tool you might be familiar with.  
+3. Check that the entire build was downloaded correctly and “fetch” updates of main 
+branch. 
+ 
+2. Install Plugins 
+1. You will need a few plugins which are being used: 
+• Journeymans Minimap Plugin 
+• Advanced Sessions 
+• Steam Advanced sessions 
+• Others (…) 
+These are packaged here: 
+https://drive.google.com/drive/folders/1KQbOhYlPeG2P6dYlMpu5j6sGApIQhB8e 
+ 
+(make sure you have gotten access via work email from admin) 
+2. Place the plugins under Epic/Unreal/5.2/Plugins (this path needs to be checked) 
+ 
+
+## Page 3
+FF-OI-05: “Installing the Development Build” Rev01 
+ 
+Confidential Operation Instruction  
+3. Compile Build locally 
+ 
+1. Install a C++ compiler, for example Visual Studio 2022. 
+2. Install the following librariers: 
+a. … 
+b. … 
+c. … (NET 4.26…) 
+3. Right click on the build and press compile 
+4. Change the “start” to “play in editor” 
+5. You may now start the Build 
+ 
