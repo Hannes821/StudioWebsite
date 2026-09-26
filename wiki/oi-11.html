@@ -1,8 +1,1321 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><link rel="icon" href="feldfeste-games.svg" type="image/svg+xml"><link rel="canonical" href="https://feldfeste-games.com/wiki/oi-11.html"><meta name="description" content="Damage type `CA_DamageType` is separate from delivery `E_CA_DamageDeliveryType`."><title>FF-OI-11 · Damage System · Castellum Wiki</title><link rel="stylesheet" href="wiki.css"><script src="wiki.js" defer></script></head><body><a class="skip" href="#inhalt">Skip to content</a><aside class="sidebar" id="navigation"><a class="brand" href="index.html"><span class="crest" aria-hidden="true"><img src="feldfeste-games.svg" alt="" width="46" height="38"></span><span>FELDFESTE<small>GAMES STUDIO</small></span></a><div class="project-label">CASTELLUM <span>PUBLIC WIKI</span></div><nav aria-label="Main navigation"><section class="nav-group"><h2>Overview</h2><a href="index.html" >Home</a><a href="klaerungen.html" >Open questions</a><a href="quellen.html" >Source register</a><a href="mitarbeiten.html" >Contribute to the wiki</a></section><section class="nav-group"><h2>Game Design</h2><a href="spielidee.html" >Game vision</a><a href="wirtschaft.html" >Society &amp; economy</a><a href="kampf.html" >Combat &amp; technical foundations</a><a href="fraktionen.html" >Factions &amp; cultures</a><a href="namen.html" >Names &amp; Latin terminology</a><a href="sprache.html" >Language &amp; audio</a><a href="tags.html" >Gameplay Tags</a><a href="achievements.html" >Achievements &amp; Steam</a><a href="meilensteine.html" >Milestones</a><a href="healthbar.html" >Healthbar &amp; selection</a></section><section class="nav-group"><h2>Engineering</h2><a href="technik.html" >Technical architecture</a><a href="operation-instructions.html" >Operation Instructions</a></section><section class="nav-group"><h2>Operation Instructions</h2><a href="oi-01.html" >FF-OI-01 · Cheats for QA Testing</a><a href="oi-02.html" >FF-OI-02 · Material Creation</a><a href="oi-03.html" >FF-OI-03 · Building Setup</a><a href="oi-04.html" >FF-OI-04 · Submenu Buildings Widget</a><a href="oi-05.html" >FF-OI-05 · Installing the Development Build</a><a href="oi-06.html" >FF-OI-06 · Claim Administration</a><a href="oi-07.html" >FF-OI-07 · Manual Level Design</a><a href="oi-08.html" >FF-OI-08 · Best Practices for Coding</a><a href="oi-09.html" >FF-OI-09 · Metahuman Character Export</a><a href="oi-10.html" >FF-OI-10 · Art Asset Pipeline</a><a href="oi-11.html" aria-current="page">FF-OI-11 · Damage System</a><a href="oi-12.html" >FF-OI-12 · Merging Branches</a><a href="oi-13.html" >FF-OI-13 · User Interface Icons</a><a href="oi-14.html" >FF-OI-14 · Virtual Runtime Textures</a><a href="oi-15.html" >FF-OI-15 · Online Systems</a><a href="oi-16.html" >FF-OI-16 · Time Management</a><a href="oi-17.html" >FF-OI-17 · Attribute Components</a></section></nav><div class="sidebar-foot"><a href="https://feldfeste-games.com/">← Feldfeste Games</a></div></aside><div class="workspace"><header class="topbar"><button id="menu-toggle" aria-controls="navigation" aria-expanded="false">☰ <span>Menu</span></button><span class="breadcrumb">Castellum <span>/</span> Operation Instructions</span><button id="search-open" aria-haspopup="dialog"><span aria-hidden="true">⌕</span> Search the wiki <kbd>Ctrl K</kbd></button><span class="team-mark"><i></i> Public wiki</span></header><main id="inhalt"><div class="page-head"><span class="eyebrow">OPERATION INSTRUCTIONS</span><h1>FF-OI-11 · Damage System</h1><p class="lead">Damage type `CA_DamageType` is separate from delivery `E_CA_DamageDeliveryType`.</p><div class="meta"><span class="badge attention">Review needed</span><span>Snapshot 18 Sep 2026</span><a class="edit" href="https://github.com/Hannes821/StudioWebsite/edit/main/_wiki/content/oi-11.md">Edit this page ↗</a></div></div><div class="reading-layout"><article><h2 id="abschnitt-1">Purpose and key points</h2><p>Damage type <code>CA_DamageType</code> is separate from delivery <code>E_CA_DamageDeliveryType</code>. Standard attacks use server-side ApplyDamage and HealthComponent; Delivery/Piercing come through <code>BPI_DamageDealer</code>. Effect Damage follows a separate path without Evade/Block. <strong>Unresolved:</strong> pages 6/12 describe Piercing as a damage portion bypassing block; page 7 describes reduced block chance. Kinetic impact, Attack speed and Anim notify remain under development.</p>
-<h2 id="abschnitt-2">Original and references</h2><ul>
-<li><a href="originals/FF-OI-11.pdf">Open original PDF</a></li>
-<li><a href="originals/FF-OI-11.txt">Text extract with page numbers</a></li>
-</ul>
-<p>Revision <strong>01</strong>, received <strong>18 September 2026</strong>. The original is authoritative for screenshots, Blueprint connections and detailed steps. This documented snapshot has not been checked against the current project code.</p>
-<h2 id="abschnitt-3">Maintain this instruction</h2><p>Add new revisions with a date, preserve previous originals and summarise changes here. <a href="mitarbeiten.html">Editorial workflow</a>.</p>
-<footer class="source"><strong>Source reference</strong><p>FF_OI_11_DamageSystem.pdf · Rev 01</p><p>Based on the supplied source snapshot. Changes in the current Unreal project have not been automatically verified.</p></footer></article><aside class="toc" aria-label="On this page"><h2>ON THIS PAGE</h2><a href="#abschnitt-1">Purpose and key points</a><a href="#abschnitt-2">Original and references</a><a href="#abschnitt-3">Maintain this instruction</a><div class="toc-note">Feldfeste Games<br>Unreal Engine 5.2<br>Castellum / Castle Age</div></aside></div><footer class="page-footer">Feldfeste Games · Development &amp; modding documentation <a href="mitarbeiten.html">Contribute →</a></footer></main></div><dialog id="search-dialog" aria-labelledby="search-title"><div class="search-top"><label id="search-title" for="search-input">Search the wiki</label><button id="search-close" aria-label="Close search">✕</button></div><input id="search-input" type="search" placeholder="Health, factions, Gameplay Tags …" autocomplete="off"><p id="search-status" role="status">Enter a search term. Search covers all 33 articles.</p><div id="search-results"></div></dialog></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><link rel="icon" href="feldfeste-games.svg" type="image/svg+xml"><link rel="canonical" href="https://feldfeste-games.com/wiki/oi-11.html"><meta name="description" content="Damage type `CA_DamageType` is separate from delivery `E_CA_DamageDeliveryType`."><title>FF-OI-11 · Damage System · Castellum Wiki</title><link rel="stylesheet" href="wiki.css"><script src="wiki.js" defer></script></head><body><a class="skip" href="#inhalt">Skip to content</a><aside class="sidebar" id="navigation"><a class="brand" href="index.html"><span class="crest" aria-hidden="true"><img src="feldfeste-games.svg" alt="" width="46" height="38"></span><span>FELDFESTE<small>GAMES STUDIO</small></span></a><div class="project-label">CASTELLUM <span>PUBLIC WIKI</span></div><nav aria-label="Main navigation"><section class="nav-group"><h2>Overview</h2><a href="index.html" >Home</a><a href="klaerungen.html" >Open questions</a><a href="quellen.html" >Source register</a><a href="mitarbeiten.html" >Contribute to the wiki</a></section><section class="nav-group"><h2>Game Design</h2><a href="spielidee.html" >Game vision</a><a href="wirtschaft.html" >Society &amp; economy</a><a href="kampf.html" >Combat &amp; technical foundations</a><a href="fraktionen.html" >Factions &amp; cultures</a><a href="namen.html" >Names &amp; Latin terminology</a><a href="sprache.html" >Language &amp; audio</a><a href="tags.html" >Gameplay Tags</a><a href="achievements.html" >Achievements &amp; Steam</a><a href="meilensteine.html" >Milestones</a><a href="healthbar.html" >Healthbar &amp; selection</a></section><section class="nav-group"><h2>Engineering</h2><a href="technik.html" >Technical architecture</a><a href="operation-instructions.html" >Operation Instructions</a></section><section class="nav-group"><h2>Operation Instructions</h2><a href="oi-01.html" >FF-OI-01 · Cheats for QA Testing</a><a href="oi-02.html" >FF-OI-02 · Material Creation</a><a href="oi-03.html" >FF-OI-03 · Building Setup</a><a href="oi-04.html" >FF-OI-04 · Submenu Buildings Widget</a><a href="oi-05.html" >FF-OI-05 · Installing the Development Build</a><a href="oi-06.html" >FF-OI-06 · Claim Administration</a><a href="oi-07.html" >FF-OI-07 · Manual Level Design</a><a href="oi-08.html" >FF-OI-08 · Best Practices for Coding</a><a href="oi-09.html" >FF-OI-09 · Metahuman Character Export</a><a href="oi-10.html" >FF-OI-10 · Art Asset Pipeline</a><a href="oi-11.html" aria-current="page">FF-OI-11 · Damage System</a><a href="oi-12.html" >FF-OI-12 · Merging Branches</a><a href="oi-13.html" >FF-OI-13 · User Interface Icons</a><a href="oi-14.html" >FF-OI-14 · Virtual Runtime Textures</a><a href="oi-15.html" >FF-OI-15 · Online Systems</a><a href="oi-16.html" >FF-OI-16 · Time Management</a><a href="oi-17.html" >FF-OI-17 · Attribute Components</a></section></nav><div class="sidebar-foot"><a href="https://feldfeste-games.com/">← Feldfeste Games</a></div></aside><div class="workspace"><header class="topbar"><button id="menu-toggle" aria-controls="navigation" aria-expanded="false">☰ <span>Menu</span></button><span class="breadcrumb">Castellum <span>/</span> Operation Instructions</span><button id="search-open" aria-haspopup="dialog"><span aria-hidden="true">⌕</span> Search the wiki <kbd>Ctrl K</kbd></button><span class="team-mark"><i></i> Public wiki</span></header><main id="inhalt"><div class="page-head"><span class="eyebrow">OPERATION INSTRUCTIONS</span><h1>FF-OI-11 · Damage System</h1><p class="lead">Damage type `CA_DamageType` is separate from delivery `E_CA_DamageDeliveryType`.</p><div class="meta"><span class="badge attention">Review needed</span><span>Snapshot 18 Sep 2026</span><a class="edit" href="https://github.com/Hannes821/StudioWebsite/edit/main/_wiki/content/oi-11.md">Edit this page ↗</a></div></div><div class="reading-layout"><article><p><a href="originals/FF-OI-11.pdf">Download original PDF</a> · <a href="originals/FF-OI-11.txt">Plain-text extract</a></p>
+<p>Every original page is reproduced below, including all illustrations, tables and labels. Select a page image to open it at full resolution. Expand <strong>Text for copying and search</strong> below a page to read its extracted text; extraction may change spacing or special characters.</p>
+<h2 id="abschnitt-1">Page 1</h2><p><a href="images/operation-instructions/FF-OI-11/page-01.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-01.webp" alt="FF-OI-11, original page 1" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Feldfeste  Operation  Instruction
+ FF-OI-11:  “Damage  system”    Document  History   Revision  Content  Editor  Time  01  Initial  Document  Creation  Arina  23.06.2026
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-2">Page 2</h2><p><a href="images/operation-instructions/FF-OI-11/page-02.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-02.webp" alt="FF-OI-11, original page 2" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+
+Table  of  Contents  Overview .................................................................................................................................. 3 CA  Damage  Type ..................................................................................................................... 4 Implemented  DamageTypes .............................................................................................. 4 Damage  Delivery  Type ............................................................................................................. 5 Piercing  damage ...................................................................................................................... 6 Damage  Dealer  Interface ......................................................................................................... 7 Status  Effects ........................................................................................................................... 9 When  adding  a  new  effect .................................................................................................. 9 Implemented  Effects ........................................................................................................... 9 Status  Effect  Target  Interface ................................................................................................. 10 Defense  component ............................................................................................................... 11 Damage  calculation ................................................................................................................ 12 Stats  involved  in  damage  calculation: .............................................................................. 12 Damage  pipeline .............................................................................................................. 12 Effect  Damage .................................................................................................................. 14 Kinetic  impact ......................................................................................................................... 15 Attack  speed .......................................................................................................................... 16 Anim  notify ............................................................................................................................. 17
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-3">Page 3</h2><p><a href="images/operation-instructions/FF-OI-11/page-03.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-03.webp" alt="FF-OI-11, original page 3" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Overview
+This  document  describes  the  damage  and  status  effect  system  architecture.  The  system  is
+designed
+
+to
+
+be
+
+data-driven
+
+and
+
+extensible
+
+—
+
+adding
+
+new
+
+damage
+
+types
+
+or
+
+effects
+
+requires
+
+no
+
+changes
+
+to
+
+existing
+
+code.
+
+Damage  is  defined  by  two  independent  dimensions:  what  kind  (CA_DamageType)  and  how
+it
+
+is
+
+delivered
+
+(E_CA_DamageDeliveryType).  All  damage  calculation  happens  in  HealthComponent —  via  OnTakeDamage for  incoming  attacks  and  ApplyEffectDamage
+for
+
+effect
+
+tick
+
+damage.
+
+Delivery
+
+type
+
+and
+
+piercing
+
+data
+
+are
+
+retrieved
+
+from
+
+the
+ DamageCauser via  the  Damage  Dealer  Interface.
+Status  effects  are  self-contained  ActorComponents  added  dynamically  to  the  target.  The  Status  Effect  Component acts  as  a  manager  —  it  creates,  tracks,  and  removes  effects.
+Each
+
+effect
+
+handles
+
+its
+
+own
+
+behaviour
+
+and
+
+lifetime
+
+independently.
+
+Defensive  stats  live  in  the  Defense  Component,  which  provides  resist  and  block/evade
+modifiers
+
+as
+
+simple
+
+lookups.
+
+Final
+
+damage
+
+is
+
+calculated
+
+from
+
+these
+
+modifiers
+
+with
+
+no
+
+branching
+
+logic.
+
+Actors  that  can  receive  status  effects  implement  the Status  Effect  Target
+Interface
+ to  handle  visual  and  gameplay  reactions  without  coupling  to  specific  effect
+classes.
+
+Key  Concepts
+●  CA_DamageType  —  defines  the  nature  of  damage  (Physical,  Fire)  ●  E_CA_DamageDeliveryType  —  enum  defining  how  damage  is  delivered  (Melee,
+SmallProjectile,
+
+LargeProjectile)
+ ●  Damage  Dealer  Interface  —  implemented  by  DamageCausers  to  expose
+DeliveryType
+
+and
+
+Piercing
+ ●  Status  Effect  Component  —  manager  component  that  creates,  tracks,  and  removes
+active
+
+effects
+
+on
+
+an
+
+actor
+ ●  Status  Effects  —  self-contained  ActorComponents  defining  the  behaviour  of  a
+specific
+
+effect
+ ●  StatusEffectTarget  Interface  —  implemented  by  actors  to  react  to  effect  application
+and
+
+expiration
+
+without
+
+casts
+ ●  Defense  Component  —  holds  defensive  stats;  provides  resist  and  block/evade
+modifiers
+
+as
+
+Map
+
+lookups
+ ●  Damage  Calculation  —  the  pipeline  that  resolves  incoming  damage  into  a  final  value
+using
+
+attacker
+
+stats,
+
+defensive
+
+modifiers,
+
+and
+
+damage
+
+type.
+
+
+
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-4">Page 4</h2><p><a href="images/operation-instructions/FF-OI-11/page-04.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-04.webp" alt="FF-OI-11, original page 4" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+CA  Damage  Type
+Base  class  located:  Content/CA_Code/Blueprints/DamageType/CA_DamageTypeBase.uasset
+ Defines  the  nature  of  damage.  Used  as  a  key  for  resist  lookup  in  DefenseComponent.   Properties  ●  StatusEffectClass  —  optional.  The  effect  to  apply  on  hit.   Functions  ●  ApplyEffect  (public)  —  called  in  the  damage  pipeline.  Override  this  in  every
+subclass
+
+to
+
+define
+
+what
+
+happens
+
+on
+
+hit.
+
+Base
+
+implementation
+
+does
+
+nothing.
+ ●  BaseApplyStatusEffectImpl  (protected)   —  helper  implementation  that  passes
+StatusEffectClass
+
+to
+
+the
+
+target&#39;s
+
+StatusEffectManagerComponent.
+
+Call
+
+this
+
+from
+
+ApplyEffect
+
+if
+
+the
+
+damage
+
+type
+
+applies
+
+a
+
+status
+
+effect.
+  Adding  a  new  DamageType
+
+Create
+
+a
+
+subclass
+
+and
+
+override
+
+ApplyEffect.
+
+Without
+
+an
+
+override
+
+no
+
+effect
+
+will
+
+be
+
+applied.
+
+
+Example:
+
+CA_DT_Fire
+
+overrides
+
+ApplyEffect
+
+and
+
+calls
+
+BaseApplyStatusEffectImpl
+
+to
+
+apply
+
+burn.
+
+
+Implemented  DamageTypes
+●  CA_DT_Fire —  overrides  ApplyEffect,  attempts  to  apply  Burn  via  BaseApplyStatusEffectImpl  ●  CA_DT_Physical —  no  additional  effect  on  hit
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-5">Page 5</h2><p><a href="images/operation-instructions/FF-OI-11/page-05.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-05.webp" alt="FF-OI-11, original page 5" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Damage  Delivery  Type  Located:
+Content/CA_Code/Blueprints/DamageType/E_CA_DamageDeliveryType  Enum  defining  how  damage  is  delivered:   ●  Melee  ●  RangedSmallProjectile  ●  RangedLargeProjectile.
+Delivery  type  is  intentionally  separate  from  CA_DamageType —  the  same  damage  type  can
+be
+
+delivered
+
+in
+
+different
+
+ways
+
+(e.g.
+
+Fire
+
+can
+
+be
+
+both
+
+a
+
+melee
+
+weapon
+
+and
+
+an
+
+arrow
+
+projectile).
+
+Merging
+
+them
+
+would
+
+require
+
+a
+
+separate
+
+DamageType
+
+class
+
+per
+
+combination,
+
+which
+
+does
+
+not
+
+scale.
+
+Since  Unreal&#39;s  ApplyDamage does  not  support  custom  parameters,  delivery  type  is  stored
+on
+
+the
+ DamageCauser and  retrieved  via  the  Damage  Dealer  Interface inside  the
+damage
+
+pipeline.
+
+Each  delivery  type  is  used  as  a  key  for  block/evade  chance  lookup  inside  the  DefenseComponent.
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-6">Page 6</h2><p><a href="images/operation-instructions/FF-OI-11/page-06.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-06.webp" alt="FF-OI-11, original page 6" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Piercing  damage
+A  portion  of  base  damage  that  bypasses  block  entirely .
+Calculated  as  BaseDamage  ×  PiercingPercent,  where  PiercingPercent is  a  value
+from
+
+0
+
+to
+
+1.
+
+Retrieved  via  BPI_DamageDealer.  For  master  units,  stored  in  BattleComponent.
+If  block  succeeds,  only  the  piercing  portion  is  dealt.  The  non-piercing  remainder  is  blocked.
+
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-7">Page 7</h2><p><a href="images/operation-instructions/FF-OI-11/page-07.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-07.webp" alt="FF-OI-11, original page 7" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Damage  Dealer  Interface
+Located:  Content/CA_Code/Blueprints/Interfaces/BPI_DamageDealer
+Implemented  by  actors  that  deal  damage  (projectiles,  melee  weapons,  etc.).  Provides  the
+damage
+
+pipeline
+
+with
+
+data
+
+that
+
+cannot
+
+be
+
+passed
+
+through
+
+Unreal&#39;s
+ ApplyDamage directly.
+Functions
+●  GetDamageDeliveryType (public)  —  returns  E_CA_DamageDeliveryType of  the
+causer
+ ●  GetPiercingPercent (public)  —  returns  piercing  value;  reduces  block  chance  on
+the
+
+target
+ ●  GetBaseDamage (public)  —  returns  base  damage  information
+Usage
+Called
+
+inside
+ HealthComponent during  OnTakeDamage to  retrieve  delivery  and  piercing
+data
+
+from
+
+the
+ DamageCauser.  If  the  causer  does  not  implement  this  interface,  default
+values
+
+are
+
+used
+
+and
+
+damage
+
+is
+
+processed
+
+without
+
+delivery
+
+modifiers.
+
+
+
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-8">Page 8</h2><p><a href="images/operation-instructions/FF-OI-11/page-08.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-08.webp" alt="FF-OI-11, original page 8" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Status  Effect  Manager  Component
+Located:  CA_Code/Blueprints/ActorsComponents/StatusEffectComponent/StatusEffe
+ctsManagerComponent
+
+Manager  of  active  status  effects  on  an  actor.  Responsible  for  creating,  tracking,  reapplying,
+and
+
+removing
+
+effect
+
+instances.
+
+Broadcasts
+
+events
+
+on
+
+effect
+
+applied,
+
+reapplied,
+
+and
+
+expired.
+
+⚠  Effects  must  only  be  removed  through  this  manager .  Since  ActorComponents
+can
+
+only
+
+be
+
+destroyed
+
+by
+
+their
+
+owning
+
+actor,
+
+removal
+
+is
+
+handled
+
+via
+ RemoveEffect
+from
+ BPI_StatusEffectTarget.  Never  call  DestroyComponent on  an  effect
+directly.
+
+Public  interface  —  querying  active  effects  (count,  classes,  data,  immunity  check)  and
+applying
+
+or
+
+manually
+
+removing
+
+effects
+
+via
+ ApplyEffect and  Manual  Removal  Request.
+Protected  —  all  internal  management  logic:  creating  instances,  handling  removal,
+reapplication,
+
+and
+
+destruction.
+
+
+Instance  Events  —  internal  handlers  for  effect  lifecycle  (applied,  reapplied,  expired).  Bound
+automatically
+
+when
+
+a
+
+new
+
+effect
+
+is
+
+created
+
+Variables
+●  ImmuneToAll (bool)  —  if  true,  the  actor  is  immune  to  all  status  effects.  ApplyEffect will  do  nothing  regardless  of  effect  type.  ●  ResistedEffectTypes (Set)  —  a  set  of  effect  classes  the  actor  is  immune  to.
+Immunity  is  resolved  automatically  inside  ApplyEffect.  No  external  checks  are  needed
+before
+
+calling
+
+it.
+
+
+
+
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-9">Page 9</h2><p><a href="images/operation-instructions/FF-OI-11/page-09.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-09.webp" alt="FF-OI-11, original page 9" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Status  Effects
+CA_StatusEffectBase
+Located:
+ CA_Code/Blueprints/ActorsComponents/StatusEffectComponent/StatusEffe
+cts/CA_StatusEffectBase
+
+Base  class  for  all  status  effects.  Effects  are  ActorComponents  added  dynamically  to  the
+target
+
+by
+ StatusEffectsManagerComponent.  An  effect  can  have  a  limited  lifetime  or  run
+indefinitely.
+
+Damage
+
+is
+
+optional
+
+but
+
+supported
+
+at
+
+the
+
+base
+
+level.
+
+Public  variables
+●  LifetimeEffect (public,  Float)  —  duration  of  the  effect  in  seconds  ●  Infinite (public,  Bool)  —  if  true,  the  effect  never  expires  on  its  own  ●  DamageType (public)  —  damage  type  applied  by  this  effect
+CA_StatusEffect_PeriodicBase
+Located:
+ CA_Code/Blueprints/ActorsComponents/StatusEffectComponent/StatusEffe
+cts/CA_StatusEffect_PeriodicBase
+
+Extends  CA_StatusEffectBase for  effects  that  periodically  affect  the  target.
+Public  variables
+●  InitStartDelay (public,  Float)  —  delay  before  the  first  tick  fires  ●  TimerTickInterval (public,  Float)  —  interval  between  ticks  in  seconds  ●  LoopingTickTimer (public,  Bool)  —  whether  the  tick  repeats  or  fires  once
+When  adding  a  new  effect
+Override  ApplyOnOwner,  Reapply,  and  Expire from  the  base  class.  Always  call  the
+parent
+
+implementation
+
+unless
+
+you
+
+explicitly
+
+need
+
+to
+
+replace
+
+the
+
+base
+
+behaviour
+
+—
+
+the
+
+base
+
+functions
+
+handle
+
+timer
+
+management
+
+and
+
+event
+
+broadcasting.
+
+If
+
+you
+
+skip
+
+the
+
+parent
+
+call,
+
+make
+
+sure
+
+to
+
+fire
+
+the
+
+relevant
+
+events
+
+manually
+
+and
+
+review
+
+the
+
+base
+
+logic
+
+carefully
+
+before
+
+doing
+
+so.
+
+
+Implemented  Effects
+●  CA_BurnEffect —  infinite  periodic  effect  that  deals  fire  damage  to  the  owner  at
+each
+
+tick.
+
+Must
+
+be
+
+manually
+
+removed
+
+by
+
+extinguishing
+
+the
+
+actor
+
+via
+ StatusEffectsManagerComponent.
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-10">Page 10</h2><p><a href="images/operation-instructions/FF-OI-11/page-10.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-10.webp" alt="FF-OI-11, original page 10" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Status  Effect  Target  Interface
+BPI_StatusEffectTarget
+Located:  CA_Code/Blueprints/Interfaces/BPI_StatusEffectTarget
+Implemented  by  actors  that  can  receive  status  effects.
+At  first  glance  redundant  given  StatusEffectsManagerComponent,  but  serves  two
+distinct
+
+purposes:
+
+Effect  removal  —  ActorComponents  can  only  be  destroyed  by  their  owning  actor.  RemoveEffect is  the  only  way  to  correctly  handle  destruction  without  casts  or  direct  DestroyComponent calls  from  outside.
+Actor  reactions  —  functions  like  OnStartBurn /  OnEndBurn allow  each  actor  to  define  its
+own
+
+visual
+
+and
+
+audio
+
+response
+
+to
+
+effects
+
+without
+
+the
+
+effect
+
+class
+
+knowing
+
+anything
+
+about
+
+the
+
+actor.
+
+This
+
+avoids
+
+casts
+
+and
+
+if/else
+
+chains
+
+—
+
+the
+
+effect
+
+simply
+
+calls
+
+the
+
+interface,
+
+each
+
+actor
+
+implements
+
+its
+
+own
+
+reaction
+
+independently.
+
+These  reaction  functions  are  primarily  for  visuals  and  sound,  but  can  also  drive
+behaviour
+
+changes
+
+on
+
+the
+
+actor.
+
+If
+
+an
+
+actor
+
+has
+
+no
+
+reaction
+
+to
+
+a
+
+specific
+
+effect
+
+—
+
+simply
+
+leave
+
+the
+
+interface
+
+functions
+
+unimplemented.
+
+No
+
+stub
+
+or
+
+empty
+
+implementation
+
+required.
+
+
+This  interface  will  grow  with  every  new  effect  added  —  each  new  effect  type  requires  a
+corresponding
+
+pair
+
+of
+
+functions
+
+(OnStart /  OnEnd).  This  is  an  accepted  trade-off  for
+readability
+
+and
+
+decoupling
+.
+
+When
+
+adding
+
+a
+
+new
+
+effect,
+
+remember
+
+to
+
+extend
+
+this
+
+interface
+
+accordingly.
+
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-11">Page 11</h2><p><a href="images/operation-instructions/FF-OI-11/page-11.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-11.webp" alt="FF-OI-11, original page 11" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Defense  component
+Located:  /CA_Code/Blueprints/ActorsComponents/DefenseComponent.uasset
+Holds  all  defensive  stats  for  the  unit.  Provides  block,  evade,  and  damage  resistance  values
+used
+
+in
+
+the
+
+damage
+
+calculation
+
+pipeline.
+
+All  parameters  are  clamped  between  0  and  1.
+Variables
+Base  values  are  set  per  unit  and  exposed  for  configuration.  Additional  values  are  applied  at
+runtime
+
+via
+
+buffs
+
+and
+
+debuffs
+
+and
+
+are
+
+not
+
+directly
+
+editable.
+
+●  BaseDamageBlockRate (public,  read  only)  —  Map&lt;DeliveryType,  float&gt;  ●  BaseDamageEvadeRate (public,  read  only)  —  Map&lt;DeliveryType,  float&gt;  ●  BaseDamageResistances (public,  read  only)  —  Map&lt;DamageType,  float&gt;  ●  AdditionalBlockRate (private)  —  runtime  modifier,  applied  on  top  of  base  ●  AdditionalEvadeRate (private)  —  runtime  modifier,  applied  on  top  of  base  ●  AdditionalDamageResistance (private)  —  runtime  modifier,  applied  on  top  of
+base
+
+Modifiers  —  public  functions  to  apply  and  remove  block,  evade,  and  damage  modifiers  at
+runtime
+
+(buffs/debuffs).
+ RemoveAllModifiers clears  everything  at  once.
+Getters  —  public  functions  to  retrieve  final  computed  rates.  Always  use  getters  in  the
+damage
+
+pipeline
+
+—
+
+they
+
+account
+
+for
+
+both
+
+base
+
+and
+
+additional
+
+values.
+
+
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-12">Page 12</h2><p><a href="images/operation-instructions/FF-OI-11/page-12.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-12.webp" alt="FF-OI-11, original page 12" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Damage  calculation
+Stats  involved  in  damage  calculation:
+Attacker  stats  —  located  in  BattleComponent:
+●  BaseDamage  —  unit&#39;s  damage   ●  Accuracy —  affects  hit  chance  ●  DamageType —  nature  of  the  attack  ●  DamageDeliveryType —  how  the  damage  is  delivered  ●  PiercingPercent —  portion  of  damage  that  bypasses  block
+Attack  speed,  attack  range  and  other  stats  exist  on  the  unit  but  do  not
+participate
+
+directly
+
+in
+
+damage
+
+calculation.
+
+Target  stats  —  located  in  DefenseComponent:
+●  BlockRate —  block  coefficient  per  delivery  type .  ●  EvadeRate —  evade  coefficient  per  delivery  type.   ●  DamageResistance —  damage  reduction  per  damage  type.
+All  three  defensive  stats  are  composed  of  a  base  value  plus  an  additional
+modifier
+
+from
+
+buffs
+
+or
+
+debuffs.
+
+Damage  pipeline
+Attack  side
+Attacks  are  executed  via  Behavior  Tree  tasks  located  at  CA_Code/Blueprints/AI/Tasks/Battle/Attacks/.  BTT_BaseAttack is  the  base
+class
+
+—
+
+current
+
+implementations
+
+are
+
+melee
+
+and
+
+ranged.
+
+●  Melee  —  applies  damage  directly.  Attack  lands  only  if  Accuracy check  passes.
+Base
+
+flow:
+
+
+●  Ranged  —  spawns  a  projectile.  Accuracy  does  not  apply  —  the  hit  is  determined  by
+whether
+
+the
+
+projectile
+
+reaches
+
+the
+
+target.
+
+On
+
+hit,
+
+the
+
+projectile
+
+applies
+
+damage.
+
+Base  flow:
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-13">Page 13</h2><p><a href="images/operation-instructions/FF-OI-11/page-13.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-13.webp" alt="FF-OI-11, original page 13" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+
+The  attacker  is  only  responsible  for  initiating  the  attack  and  providing  its  stats.
+Defense  side
+Evade,  block,  and  final  damage  calculation  happen  on  the  defending  actor  inside  HealthComponent.
+Damage  is  applied  via  Unreal&#39;s  ApplyDamage,  executed  on  the  server.  HealthComponent
+subscribes
+
+to
+
+this
+
+and
+
+handles
+
+all
+
+calculation
+
+and
+
+event
+
+broadcasting.
+
+Defense  flow:
+
+For  full  details  see  HealthComponent
+PiercingPercent and  DeliveryType are  not  passed  as  parameters  into  ApplyDamage —  they  are  retrieved  from  the  DamageCauser via  BPI_DamageDealer inside  OnTakeDamage.
+This  is  a  known  limitation  of  using  Unreal&#39;s  ApplyDamage directly  —  it  does  not
+support
+
+custom
+
+parameters
+
+beyond
+ DamageTypeClass.  The  decision  was  made  to
+keep
+
+the
+
+standard
+
+pipeline
+
+intact
+
+rather
+
+than
+
+introduce
+
+a
+
+custom
+
+damage
+
+function
+
+for
+
+primary
+
+damage.
+
+DamageCauser is  expected  to  be  valid  at  the  moment  of  the  call.  Since  ApplyDamage is  synchronous,  stats  are  retrieved  in  the  same  frame  the  attack  lands
+—
+
+before
+
+the
+
+causer
+
+could
+
+become
+
+invalid.
+
+All
+
+causer
+
+references
+
+are
+
+validity-checked
+
+before
+
+use.
+
+In
+
+practice
+
+this
+
+holds,
+
+but
+
+there
+
+is
+
+a
+
+theoretical
+
+edge
+
+case
+
+where
+
+the
+
+causer
+
+is
+
+destroyed
+
+before
+
+the
+
+call
+
+completes.
+
+This
+
+is
+
+considered
+
+an
+
+acceptable
+
+risk
+
+given
+
+the
+
+synchronous
+
+nature
+
+of
+
+the
+
+pipeline.
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-14">Page 14</h2><p><a href="images/operation-instructions/FF-OI-11/page-14.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-14.webp" alt="FF-OI-11, original page 14" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Effect  Damage
+Status  effects  deal  damage  through  a  separate  server  event  ApplyEffectDamage in  HealthComponent,  bypassing  the  main  OnTakeDamage pipeline.  This  avoids  an  effect
+reapplying
+
+itself
+
+on
+
+each
+
+damage
+
+tick.
+
+Effect  damage  cannot  be  evaded  or  blocked  —  only  DamageResistance is  applied  before
+dealing
+
+the
+
+final
+
+damage.
+
+
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-15">Page 15</h2><p><a href="images/operation-instructions/FF-OI-11/page-15.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-15.webp" alt="FF-OI-11, original page 15" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Kinetic  impact
+This  section  is  under  development.
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-16">Page 16</h2><p><a href="images/operation-instructions/FF-OI-11/page-16.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-16.webp" alt="FF-OI-11, original page 16" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Attack  speed  This  section  is  under  development.
+Confidential  Operation  Instruction</pre></details><h2 id="abschnitt-17">Page 17</h2><p><a href="images/operation-instructions/FF-OI-11/page-17.webp"><img class="original-page" src="images/operation-instructions/FF-OI-11/page-17.webp" alt="FF-OI-11, original page 17" width="1490" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-11:  “Damage  system”
+Rev(01)
+
+Anim  notify   This  section  is  under  development.
+Confidential  Operation  Instruction</pre></details><footer class="source"><strong>Source reference</strong><p>FF_OI_11_DamageSystem.pdf · Rev 01</p><p>Based on the supplied source snapshot. Changes in the current Unreal project have not been automatically verified.</p></footer></article><aside class="toc" aria-label="On this page"><h2>ON THIS PAGE</h2><a href="#abschnitt-1">Page 1</a><a href="#abschnitt-2">Page 2</a><a href="#abschnitt-3">Page 3</a><a href="#abschnitt-4">Page 4</a><a href="#abschnitt-5">Page 5</a><a href="#abschnitt-6">Page 6</a><a href="#abschnitt-7">Page 7</a><a href="#abschnitt-8">Page 8</a><a href="#abschnitt-9">Page 9</a><a href="#abschnitt-10">Page 10</a><a href="#abschnitt-11">Page 11</a><a href="#abschnitt-12">Page 12</a><a href="#abschnitt-13">Page 13</a><a href="#abschnitt-14">Page 14</a><a href="#abschnitt-15">Page 15</a><a href="#abschnitt-16">Page 16</a><a href="#abschnitt-17">Page 17</a><div class="toc-note">Feldfeste Games<br>Unreal Engine 5.2<br>Castellum / Castle Age</div></aside></div><footer class="page-footer">Feldfeste Games · Development &amp; modding documentation <a href="mitarbeiten.html">Contribute →</a></footer></main></div><dialog id="search-dialog" aria-labelledby="search-title"><div class="search-top"><label id="search-title" for="search-input">Search the wiki</label><button id="search-close" aria-label="Close search">✕</button></div><input id="search-input" type="search" placeholder="Health, factions, Gameplay Tags …" autocomplete="off"><p id="search-status" role="status">Enter a search term. Search covers all 33 articles.</p><div id="search-results"></div></dialog></body></html>

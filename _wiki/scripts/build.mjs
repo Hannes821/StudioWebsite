@@ -6,6 +6,8 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFile(path.join(root,p),'utf8');
 const config=JSON.parse(await read('site.json'));
 const pages=JSON.parse(await read('content/pages.json'));
+const instructionPages=JSON.parse(await read('public/images/operation-instructions/manifest.json'));
+const pageImages=new Map(instructionPages.flatMap(doc=>doc.pages.map(page=>[page.image,page])));
 const out=path.join(root,'..','wiki');
 await fs.mkdir(out,{recursive:true});
 await fs.cp(path.join(root,'public'),out,{recursive:true});
@@ -19,6 +21,17 @@ for(const page of pages){
  // Team-authored Markdown only; raw HTML is shown as text rather than executed.
  const renderer=new marked.Renderer();
  renderer.html=({text})=>esc(text);
+ const defaultCode=renderer.code.bind(renderer);
+ renderer.code=function(token) {
+  if(token.lang==='pdf-transcript') return `<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>${esc(token.text)}</pre></details>`;
+  return defaultCode(token);
+ };
+ const defaultImage=renderer.image.bind(renderer);
+ renderer.image=function(token) {
+  const page=pageImages.get(token.href);
+  if(!page) return defaultImage(token);
+  return `<img class="original-page" src="${esc(token.href)}" alt="${esc(token.text)}" width="${page.width}" height="${page.height}" loading="lazy" decoding="async">`;
+ };
  const headings=[];
  renderer.heading=function({tokens,depth}) {const label=this.parser.parseInline(tokens);const id=`abschnitt-${headings.length+1}`;headings.push({label,id,depth});return `<h${depth} id="${id}">${label}</h${depth}>`;};
  renderer.link=function({href,tokens}) {const text=this.parser.parseInline(tokens);if(!/^(https?:\/\/|mailto:|[a-zA-Z0-9_#./%-])/.test(href)||/^(javascript|data|vbscript):/i.test(href))return text;return `<a href="${esc(href)}">${text}</a>`;};

@@ -1,8 +1,371 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><link rel="icon" href="feldfeste-games.svg" type="image/svg+xml"><link rel="canonical" href="https://feldfeste-games.com/wiki/oi-07.html"><meta name="description" content="Covers historical maps, regional biomes and the pipeline from geographic data through CloudCompare and DCC/heightmaps into Unreal."><title>FF-OI-07 · Manual Level Design · Castellum Wiki</title><link rel="stylesheet" href="wiki.css"><script src="wiki.js" defer></script></head><body><a class="skip" href="#inhalt">Skip to content</a><aside class="sidebar" id="navigation"><a class="brand" href="index.html"><span class="crest" aria-hidden="true"><img src="feldfeste-games.svg" alt="" width="46" height="38"></span><span>FELDFESTE<small>GAMES STUDIO</small></span></a><div class="project-label">CASTELLUM <span>PUBLIC WIKI</span></div><nav aria-label="Main navigation"><section class="nav-group"><h2>Overview</h2><a href="index.html" >Home</a><a href="klaerungen.html" >Open questions</a><a href="quellen.html" >Source register</a><a href="mitarbeiten.html" >Contribute to the wiki</a></section><section class="nav-group"><h2>Game Design</h2><a href="spielidee.html" >Game vision</a><a href="wirtschaft.html" >Society &amp; economy</a><a href="kampf.html" >Combat &amp; technical foundations</a><a href="fraktionen.html" >Factions &amp; cultures</a><a href="namen.html" >Names &amp; Latin terminology</a><a href="sprache.html" >Language &amp; audio</a><a href="tags.html" >Gameplay Tags</a><a href="achievements.html" >Achievements &amp; Steam</a><a href="meilensteine.html" >Milestones</a><a href="healthbar.html" >Healthbar &amp; selection</a></section><section class="nav-group"><h2>Engineering</h2><a href="technik.html" >Technical architecture</a><a href="operation-instructions.html" >Operation Instructions</a></section><section class="nav-group"><h2>Operation Instructions</h2><a href="oi-01.html" >FF-OI-01 · Cheats for QA Testing</a><a href="oi-02.html" >FF-OI-02 · Material Creation</a><a href="oi-03.html" >FF-OI-03 · Building Setup</a><a href="oi-04.html" >FF-OI-04 · Submenu Buildings Widget</a><a href="oi-05.html" >FF-OI-05 · Installing the Development Build</a><a href="oi-06.html" >FF-OI-06 · Claim Administration</a><a href="oi-07.html" aria-current="page">FF-OI-07 · Manual Level Design</a><a href="oi-08.html" >FF-OI-08 · Best Practices for Coding</a><a href="oi-09.html" >FF-OI-09 · Metahuman Character Export</a><a href="oi-10.html" >FF-OI-10 · Art Asset Pipeline</a><a href="oi-11.html" >FF-OI-11 · Damage System</a><a href="oi-12.html" >FF-OI-12 · Merging Branches</a><a href="oi-13.html" >FF-OI-13 · User Interface Icons</a><a href="oi-14.html" >FF-OI-14 · Virtual Runtime Textures</a><a href="oi-15.html" >FF-OI-15 · Online Systems</a><a href="oi-16.html" >FF-OI-16 · Time Management</a><a href="oi-17.html" >FF-OI-17 · Attribute Components</a></section></nav><div class="sidebar-foot"><a href="https://feldfeste-games.com/">← Feldfeste Games</a></div></aside><div class="workspace"><header class="topbar"><button id="menu-toggle" aria-controls="navigation" aria-expanded="false">☰ <span>Menu</span></button><span class="breadcrumb">Castellum <span>/</span> Operation Instructions</span><button id="search-open" aria-haspopup="dialog"><span aria-hidden="true">⌕</span> Search the wiki <kbd>Ctrl K</kbd></button><span class="team-mark"><i></i> Public wiki</span></header><main id="inhalt"><div class="page-head"><span class="eyebrow">OPERATION INSTRUCTIONS</span><h1>FF-OI-07 · Manual Level Design</h1><p class="lead">Covers historical maps, regional biomes and the pipeline from geographic data through CloudCompare and DCC/heightmaps into Unreal.</p><div class="meta"><span class="badge attention">Review needed</span><span>Snapshot 18 Sep 2026</span><a class="edit" href="https://github.com/Hannes821/StudioWebsite/edit/main/_wiki/content/oi-07.md">Edit this page ↗</a></div></div><div class="reading-layout"><article><h2 id="abschnitt-1">Purpose and key points</h2><p>Covers historical maps, regional biomes and the pipeline from geographic data through CloudCompare and DCC/heightmaps into Unreal. Includes automaterial, boundaries, water, navmesh, weather, animals and camps. Some methods are experimental or incomplete. <strong>Version note:</strong> UE4 references and a UE-5.5+ Nav Link note must not be transferred to UE 5.2 without checking.</p>
-<h2 id="abschnitt-2">Original and references</h2><ul>
-<li><a href="originals/FF-OI-07.pdf">Open original PDF</a></li>
-<li><a href="originals/FF-OI-07.txt">Text extract with page numbers</a></li>
-</ul>
-<p>Revision <strong>01</strong>, received <strong>18 September 2026</strong>. The original is authoritative for screenshots, Blueprint connections and detailed steps. This documented snapshot has not been checked against the current project code.</p>
-<h2 id="abschnitt-3">Maintain this instruction</h2><p>Add new revisions with a date, preserve previous originals and summarise changes here. <a href="mitarbeiten.html">Editorial workflow</a>.</p>
-<footer class="source"><strong>Source reference</strong><p>FF_OI_07_ManualLevelDesign.pdf · Rev 01</p><p>Based on the supplied source snapshot. Changes in the current Unreal project have not been automatically verified.</p></footer></article><aside class="toc" aria-label="On this page"><h2>ON THIS PAGE</h2><a href="#abschnitt-1">Purpose and key points</a><a href="#abschnitt-2">Original and references</a><a href="#abschnitt-3">Maintain this instruction</a><div class="toc-note">Feldfeste Games<br>Unreal Engine 5.2<br>Castellum / Castle Age</div></aside></div><footer class="page-footer">Feldfeste Games · Development &amp; modding documentation <a href="mitarbeiten.html">Contribute →</a></footer></main></div><dialog id="search-dialog" aria-labelledby="search-title"><div class="search-top"><label id="search-title" for="search-input">Search the wiki</label><button id="search-close" aria-label="Close search">✕</button></div><input id="search-input" type="search" placeholder="Health, factions, Gameplay Tags …" autocomplete="off"><p id="search-status" role="status">Enter a search term. Search covers all 33 articles.</p><div id="search-results"></div></dialog></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><link rel="icon" href="feldfeste-games.svg" type="image/svg+xml"><link rel="canonical" href="https://feldfeste-games.com/wiki/oi-07.html"><meta name="description" content="Covers historical maps, regional biomes and the pipeline from geographic data through CloudCompare and DCC/heightmaps into Unreal."><title>FF-OI-07 · Manual Level Design · Castellum Wiki</title><link rel="stylesheet" href="wiki.css"><script src="wiki.js" defer></script></head><body><a class="skip" href="#inhalt">Skip to content</a><aside class="sidebar" id="navigation"><a class="brand" href="index.html"><span class="crest" aria-hidden="true"><img src="feldfeste-games.svg" alt="" width="46" height="38"></span><span>FELDFESTE<small>GAMES STUDIO</small></span></a><div class="project-label">CASTELLUM <span>PUBLIC WIKI</span></div><nav aria-label="Main navigation"><section class="nav-group"><h2>Overview</h2><a href="index.html" >Home</a><a href="klaerungen.html" >Open questions</a><a href="quellen.html" >Source register</a><a href="mitarbeiten.html" >Contribute to the wiki</a></section><section class="nav-group"><h2>Game Design</h2><a href="spielidee.html" >Game vision</a><a href="wirtschaft.html" >Society &amp; economy</a><a href="kampf.html" >Combat &amp; technical foundations</a><a href="fraktionen.html" >Factions &amp; cultures</a><a href="namen.html" >Names &amp; Latin terminology</a><a href="sprache.html" >Language &amp; audio</a><a href="tags.html" >Gameplay Tags</a><a href="achievements.html" >Achievements &amp; Steam</a><a href="meilensteine.html" >Milestones</a><a href="healthbar.html" >Healthbar &amp; selection</a></section><section class="nav-group"><h2>Engineering</h2><a href="technik.html" >Technical architecture</a><a href="operation-instructions.html" >Operation Instructions</a></section><section class="nav-group"><h2>Operation Instructions</h2><a href="oi-01.html" >FF-OI-01 · Cheats for QA Testing</a><a href="oi-02.html" >FF-OI-02 · Material Creation</a><a href="oi-03.html" >FF-OI-03 · Building Setup</a><a href="oi-04.html" >FF-OI-04 · Submenu Buildings Widget</a><a href="oi-05.html" >FF-OI-05 · Installing the Development Build</a><a href="oi-06.html" >FF-OI-06 · Claim Administration</a><a href="oi-07.html" aria-current="page">FF-OI-07 · Manual Level Design</a><a href="oi-08.html" >FF-OI-08 · Best Practices for Coding</a><a href="oi-09.html" >FF-OI-09 · Metahuman Character Export</a><a href="oi-10.html" >FF-OI-10 · Art Asset Pipeline</a><a href="oi-11.html" >FF-OI-11 · Damage System</a><a href="oi-12.html" >FF-OI-12 · Merging Branches</a><a href="oi-13.html" >FF-OI-13 · User Interface Icons</a><a href="oi-14.html" >FF-OI-14 · Virtual Runtime Textures</a><a href="oi-15.html" >FF-OI-15 · Online Systems</a><a href="oi-16.html" >FF-OI-16 · Time Management</a><a href="oi-17.html" >FF-OI-17 · Attribute Components</a></section></nav><div class="sidebar-foot"><a href="https://feldfeste-games.com/">← Feldfeste Games</a></div></aside><div class="workspace"><header class="topbar"><button id="menu-toggle" aria-controls="navigation" aria-expanded="false">☰ <span>Menu</span></button><span class="breadcrumb">Castellum <span>/</span> Operation Instructions</span><button id="search-open" aria-haspopup="dialog"><span aria-hidden="true">⌕</span> Search the wiki <kbd>Ctrl K</kbd></button><span class="team-mark"><i></i> Public wiki</span></header><main id="inhalt"><div class="page-head"><span class="eyebrow">OPERATION INSTRUCTIONS</span><h1>FF-OI-07 · Manual Level Design</h1><p class="lead">Covers historical maps, regional biomes and the pipeline from geographic data through CloudCompare and DCC/heightmaps into Unreal.</p><div class="meta"><span class="badge attention">Review needed</span><span>Snapshot 18 Sep 2026</span><a class="edit" href="https://github.com/Hannes821/StudioWebsite/edit/main/_wiki/content/oi-07.md">Edit this page ↗</a></div></div><div class="reading-layout"><article><p><a href="originals/FF-OI-07.pdf">Download original PDF</a> · <a href="originals/FF-OI-07.txt">Plain-text extract</a></p>
+<p>Every original page is reproduced below, including all illustrations, tables and labels. Select a page image to open it at full resolution. Expand <strong>Text for copying and search</strong> below a page to read its extracted text; extraction may change spacing or special characters.</p>
+<h2 id="abschnitt-1">Page 1</h2><p><a href="images/operation-instructions/FF-OI-07/page-01.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-01.webp" alt="FF-OI-07, original page 1" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+Feldfeste Operation Instruction
+
+FF-OI-07: “Manual Level Design”
+
+
+Document History
+
+Revision Content Editor Time
+01 Initial Document Creation Hannes 15.06.2026</pre></details><h2 id="abschnitt-2">Page 2</h2><p><a href="images/operation-instructions/FF-OI-07/page-02.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-02.webp" alt="FF-OI-07, original page 2" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+Contents
+FF-OI-07: “Manual Level Design” ................................ ................................ ....................... 1
+Document History ................................ ................................ ................................ .............. 1
+1. Overview and Purpose ................................ ................................ ................................ .. 2
+2. Heightmap Creation ................................ ................................ ................................ ....... 6
+3. Level Boundaries ................................ ................................ ................................ ..... 12
+4. World Fog ................................ ................................ ................................ ................ 15
+5. Apply Auto Material ................................ ................................ ................................ ..... 16
+6. Place Trees ................................ ................................ ................................ ................. 16
+7. Place Rock Boulders ................................ ................................ ................................ ... 17
+8. Place Water Plane underneath Landscape ................................ ................................ .. 17
+9. Create Navmesh................................ ................................ ................................ .......... 17
+10. Tweak UltraDynamic Skies &amp; Weather ................................ ................................ ...... 18
+11. Placing Encounter Animals ................................ ................................ ........................ 18
+12. Placing Player Start Camps ................................ ................................ ....................... 18
+13. Placing NPC camps ................................ ................................ ................................ ... 18
+14. Placing traveler spawners ................................ ................................ .......................... 18
+15. Setting up Birds ................................ ................................ ................................ ......... 18
+Set up Level Blueprint ................................ ................................ ................................ ..... 20
+
+
+
+
+
+
+
+1. Overview and Purpose
+This guide is supposed to be a quick reference for any level designer in our team to build
+levels. Just follow the Scheme and you should be fine. As this is a work in progress, details
+will be updated and added. For any feedback and questions, please directly target our discord
+channel for level design questions!
+
+The Maps we create for Castle Age share the following characteristics:</pre></details><h2 id="abschnitt-3">Page 3</h2><p><a href="images/operation-instructions/FF-OI-07/page-03.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-03.webp" alt="FF-OI-07, original page 3" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+● real-world reference (use geodata as a base)
+● relatively small, just a few square kilometers
+● mostly around historic areas of interest like castles or battle fields
+● trying to emulate nature in the environment
+● trying to re-create a “naturalistic” appearance
+● using one of the specific biomes we plan:
+○ north european grassland (flat, swampy)
+https://trello.com/c/jQYtemRc/482-northern-swamp-biome-weather-picked-
+custom-maps-flatlands
+
+
+○ west-european atlantic coast (cliffs, beach, gras)
+https://trello.com/c/um914wFR/815-western-atlantic-coast-biome-weather-
+custom-maps-normandy
+
+○ Middle-European mid-mountain forests
+https://trello.com/c/YsLZ77z9/480-middle-range-mountains-blackforest-
+thuringian-forest-bavarian-forest-erzgebirge-etc-weather-maps
+(blackforest, france, bohemian forest, bavarian forest, thuringian forest etc)
+
+
+○ Alpine Biome
+https://trello.com/c/8NeOquUe/816-alpine-biome-weather-custom-maps</pre></details><h2 id="abschnitt-4">Page 4</h2><p><a href="images/operation-instructions/FF-OI-07/page-04.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-04.webp" alt="FF-OI-07, original page 4" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+○ Western mediterranean: (Italy, Iberia)
+https://trello.com/c/lFZRKCkJ/481-mediterranian-biome-weather-maps
+
+
+○ [DLC] mediterranean coast (cliffs, beach, subtropical) [greek isles]
+https://trello.com/c/99ySlJC1/504-east-mediterranian-biome-greek-isles-
+weather-maps-animals
+
+
+○ [DLC] AnatoliaPersia
+https://trello.com/c/lOhRsjjU/487-oriental-biome-anatolia-persia-weather-
+maps-animals</pre></details><h2 id="abschnitt-5">Page 5</h2><p><a href="images/operation-instructions/FF-OI-07/page-05.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-05.webp" alt="FF-OI-07, original page 5" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+○ [DLC] Mongol Steppe
+https://trello.com/c/iJqUcM1u/493-desert-and-steppe-biome-weather-maps-
+animals
+
+
+○ [DLC] North Africa
+
+https://trello.com/c/C7a1y4Ji/498-north-african-biome-animals-maps-weather
+
+○ [DLC] Middle East /Holy Land
+
+● Each of these have their regional:
+○ Weathers
+○ Animal Encounters
+○ Terrain Textures
+○ Foliage (Bushes, Grass)
+○ Trees
+○ Rocks
+
+Overview of the Workflow
+
+• https://docs.unrealengine.com/4.27/en-US/BuildingWorlds/Landscape/Creation/
+• Create Landscape
+• Apply Material
+• Check that layer info is correct
+• Landscape Edit Layers in Unreal Engine
+• https://docs.unrealengine.com/4.27/en-
+US/BuildingWorlds/Landscape/Editing/SculptMode/Blueprint/
+• ( Voxel Plugin ) can do real-time editing of landscape (not required) (Brushes for siege
+impacts? Destroyable terrain?)</pre></details><h2 id="abschnitt-6">Page 6</h2><p><a href="images/operation-instructions/FF-OI-07/page-06.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-06.webp" alt="FF-OI-07, original page 6" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+2. Heightmap Creation
+
+• Data Sources:
+• Extract 3d Data from Online Maps
+• Outside UE:
+• Polish and fit Map Data
+• Export in Texture Formate
+• Inside UE:
+• Import in Unreal Engine
+• Final Tweaks in Unreal Engine
+
+1.  get XYZ-file of the region
+2.  import to CloudCompare (freeware)
+3.  export mesh from cloudcompare
+4.  import mesh in 3dsMax
+5.  texture with gradient and render top view with 16bit
+6.  use generated height map in Unreal as landscape
+
+
+
+
+1.1 Extract 3d Data from Online Maps
+
+1. Sachsen (in the game the Saxon eastern marches, mostly Meißen, Zeitz, Lausitz etc.)
+https://www.geodaten.sachsen.de/downloadbereich-digitale-hoehenmodelle-4851.html
+2. Bayern ( part of Herzogtum Bayern and Nordmark)
+https://geodaten.bayern.de/opengeodata/OpenDataDetail.html?pn=dgm1</pre></details><h2 id="abschnitt-7">Page 7</h2><p><a href="images/operation-instructions/FF-OI-07/page-07.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-07.webp" alt="FF-OI-07, original page 7" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+3. Thüringen (Thüringen) https://www.geoportal-th.de/de-de/Downloadbereiche/Download-
+Offene-Geodaten-Th%C3%BCringen/Download-H%C3%B6hendaten
+4. Niedersachsen (in the game part of Herzogtum Sachsen)
+https://opengeodata.lgln.niedersachsen.de/#bdlm
+5. Tyrol (part of Bavarian eastern marches, Austria)
+https://maps.civis.bz.it/#/?context=PROV-BZ-MONUMENT-
+ARCHAEOLOGY&amp;lang=de&amp;bbox=1275156.6904,5923073.1162,1275297.7807,5923216
+.8152
+6. Baden-Würtemberg (in the game part of Herzogtum Schwaben) https://www.geoportal-
+bw.de/#/(sidenav:menu)
+7. Schweiz (part of Herzogtum Schwaben in the game)
+https://www.geo.admin.ch/de/geodatenmodelle
+8. Netherlands (not sure)
+https://data.overheid.nl/datasets?facet_theme%5B0%5D=http%3A//standaarden.overhei
+d.nl/owms/terms/Natuur_en_milieu
+9. Paris (not sure) https://opendata.paris.fr/pages/home/
+10. France (need to investigate further) https://opendata.paris.fr/pages/home/
+11. Italy (here Bologna example) https://www.dati.gov.it/view-
+dataset?groups=ambiente&amp;organization=comune-di-bologna
+12. Tuscany (Herzogtum Toskana in the game) https://www.regione.toscana.it/-/open-
+geodata
+13. Flanders/Belgium https://www.geo.be/home?l=de
+14. Spain https://datos.gob.es/en
+15. Normandy (Herzogtum Normandie in the game)
+https://data.maptiler.com/downloads/europe/france/basse-normandie/
+16. maybe this tool can help with many places: https://data.maptiler.com/downloads/europe/
+
+
+1.2 Optional Polish outside the Editor
+• Gaea
+Problem of costs/ License
+• https://quadspinner.com/Download</pre></details><h2 id="abschnitt-8">Page 8</h2><p><a href="images/operation-instructions/FF-OI-07/page-08.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-08.webp" alt="FF-OI-07, original page 8" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+● CloudCompare
+● https://www.danielgm.net/cc/
+● https://www.youtube.com/watch?v=jEQ93GIEJY8</pre></details><h2 id="abschnitt-9">Page 9</h2><p><a href="images/operation-instructions/FF-OI-07/page-09.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-09.webp" alt="FF-OI-07, original page 9" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+
+Setting up different layers for the same height map
+(i didnt get this to work yet)
+• Multilayer example from Zachary,
+a picture per layer.
+• I want only height info, layers are auto-created!
+🡪 one layer is sufficient!</pre></details><h2 id="abschnitt-10">Page 10</h2><p><a href="images/operation-instructions/FF-OI-07/page-10.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-10.webp" alt="FF-OI-07, original page 10" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+
+
+BLENDER BAKE</pre></details><h2 id="abschnitt-11">Page 11</h2><p><a href="images/operation-instructions/FF-OI-07/page-11.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-11.webp" alt="FF-OI-07, original page 11" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+• https://devforum.roblox.com/t/using-blender-to-generate-properly-scaled-heightmaps-
+from-a-mesh/382209
+• Imported mesh into blender
+1. and there you can click on &quot;BAKE&quot;
+2. but i got the error of &quot;no active UV layer found in the object&quot;
+
+using Geodata and displacement in Blender
+• HTTPS://Heightmap.Skydark.Pl/
+• https://youtu.be/uHFSAnPgsEA?si=1MOg1Jw2wmqhWoMC
+• PNG download
+• Blender:
+• renderer Cycles, Auflösung runter
+• Create plane
+• Subdivide
+• Shading/ plane /neues material (hat displacement) strg+T
+• Ins colour rein /material einstellungen /displacement and bumb
+• Skalierung anpassen
+
+TerrainMagic
+• https://www.youtube.com/watch?v=HD2OIIUOmLA
+•
+1.3 Import Heightmap Data into UNREAL
+https://docs.unrealengine.com/4.27/en-US/BuildingWorlds/Landscape/aq/
+
+• https://docs.unrealengine.com/4.27/en-US/BuildingWorlds/Landscape/Custom/
+„Landscape layers can be imported from external programs via implementation of the
+ILandscapeHeightmapFileFormat and ILandscapeWeightmapFileFormat interfaces. The
+editor&#39;s existing support for image-based importing has been converted to use this
+interface and is fully supported. Images for the built-in formats are still required to be</pre></details><h2 id="abschnitt-12">Page 12</h2><p><a href="images/operation-instructions/FF-OI-07/page-12.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-12.webp" alt="FF-OI-07, original page 12" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+grayscale, 8 bits per pixel, single channel files in either .PNG or .RAW format. If you are
+creating layers in Photoshop, use the following settings when creating a new document:“
+• Heightmap Formats: When exporting heightmaps from external programs, only the
+following formats are usable inside UE4. 16-bit, grayscale PNG file 16-bit, grayscale
+RAW file in little-endian byte order
+
+
+
+2. Polish Heightmap
+height edits: create reasonable planes, valleys and mountains
+auto material tweaks: make sure transition slopes between materials are good
+create a visual barrier if possible
+
+3. Level Boundaries
+dont let the camera or units run out!
+Use a different perspective in viewport also helps.</pre></details><h2 id="abschnitt-13">Page 13</h2><p><a href="images/operation-instructions/FF-OI-07/page-13.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-13.webp" alt="FF-OI-07, original page 13" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction</pre></details><h2 id="abschnitt-14">Page 14</h2><p><a href="images/operation-instructions/FF-OI-07/page-14.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-14.webp" alt="FF-OI-07, original page 14" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction</pre></details><h2 id="abschnitt-15">Page 15</h2><p><a href="images/operation-instructions/FF-OI-07/page-15.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-15.webp" alt="FF-OI-07, original page 15" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+4. World Fog
+additional visual barrier to the sides. gentle but effectful.</pre></details><h2 id="abschnitt-16">Page 16</h2><p><a href="images/operation-instructions/FF-OI-07/page-16.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-16.webp" alt="FF-OI-07, original page 16" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+5. Apply Auto Material
+Now we can see how material transition slopes happen. Perhaps some manual painting for
+specific tactical placemennt or historical places is necessary.
+
+6. Place Trees</pre></details><h2 id="abschnitt-17">Page 17</h2><p><a href="images/operation-instructions/FF-OI-07/page-17.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-17.webp" alt="FF-OI-07, original page 17" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+7. Place Rock Boulders
+
+8. Place Water Plane underneath Landscape
+
+
+9. Create Navmesh
+Steps to Generate NavMesh
+1. Add Volume: Go to the Place Actors panel (Window &gt; Place Actors), search for &quot;Nav
+Mesh Bounds Volume&quot;, and drag it into the level.
+2. Scale Volume: Scale the volume to encompass all areas where AI should walk.
+3. Visualize: Press the P key on your keyboard to toggle the green visualization of the
+NavMesh.
+4. Automatic Build: Unreal automatically generates (bakes) the mesh within this volume
+immediately upon adding it.
+This video demonstrates how to add and scale a NavMesh Bounds Volume:
+ZenvaYouTube• 20.11.2022
+Key Configuration Settings (Project Settings &gt; Navigation Mesh)
+● Agent Radius/Height: Defines the size of the AI characters.
+● Agent Max Slope: Sets the maximum steepness the AI can walk.
+● Max Step Height: Dictates the height of obstacles the AI can step over.
+● Runtime Generation: Set to &quot;Dynamic&quot; to update the navmesh during gameplay, or
+&quot;Static&quot; for bake-only.
+
+You can watch this video to see how to configure the NavMesh settings:
+underscoreYouTube• 17.03.2022
+Pro Tips
+● Dynamic Navigation: For procedural levels, set Runtime Generation to &quot;Dynamic&quot;
+and use Navigation Invokers to generate mesh around players only.
+● Modifiers: Use Nav Modifier Volumes to mark areas as dangerous or blocked.
+● Auto Link Generation: In UE 5.5+, you can enable &quot;generate nav links&quot; in the Recast
+NavMesh settings to automatically create jumping/falling links for AI.</pre></details><h2 id="abschnitt-18">Page 18</h2><p><a href="images/operation-instructions/FF-OI-07/page-18.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-18.webp" alt="FF-OI-07, original page 18" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+●
+This video explains how to create dynamic navmesh with navigation invokers:
+GamingDev2020YouTube• 04.09.2023
+
+
+
+
+10. Tweak UltraDynamic Skies &amp; Weather
+https://www.youtube.com/watch?v=ENMuqbNSLTs
+Ultra Dynamic Sky - Product Video + Quick Start (Newest UE5 Version)
+
+
+11. Placing Encounter Animals
+● place encounter units or spawners
+● place walking nodes
+● confirm that enemy tags and so on are correctly set up
+12. Placing Player Start Camps
+● place encounter units or spawners
+13. Placing NPC camps
+● place encounter units or spawners
+14. Placing traveler spawners
+● place encounter units or spawners
+15. Setting up Birds
+● place BP_CrowSpline in level
+● place NS_SplineFlock in level
+● move the Flock in object window under the spline
+● adjust the settings for the Flock, adjust the spline points in the spline</pre></details><h2 id="abschnitt-19">Page 19</h2><p><a href="images/operation-instructions/FF-OI-07/page-19.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-19.webp" alt="FF-OI-07, original page 19" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction</pre></details><h2 id="abschnitt-20">Page 20</h2><p><a href="images/operation-instructions/FF-OI-07/page-20.webp"><img class="original-page" src="images/operation-instructions/FF-OI-07/page-20.webp" alt="FF-OI-07, original page 20" width="1489" height="2105" loading="lazy" decoding="async"></a></p>
+<details class="pdf-transcript"><summary>Text for copying and search</summary><pre>FF-OI-07: “Manual Level Design” Rev01
+
+Confidential Operation Instruction
+
+
+Set up Level Blueprint
+we will try to handle this somewhere else.</pre></details><footer class="source"><strong>Source reference</strong><p>FF_OI_07_ManualLevelDesign.pdf · Rev 01</p><p>Based on the supplied source snapshot. Changes in the current Unreal project have not been automatically verified.</p></footer></article><aside class="toc" aria-label="On this page"><h2>ON THIS PAGE</h2><a href="#abschnitt-1">Page 1</a><a href="#abschnitt-2">Page 2</a><a href="#abschnitt-3">Page 3</a><a href="#abschnitt-4">Page 4</a><a href="#abschnitt-5">Page 5</a><a href="#abschnitt-6">Page 6</a><a href="#abschnitt-7">Page 7</a><a href="#abschnitt-8">Page 8</a><a href="#abschnitt-9">Page 9</a><a href="#abschnitt-10">Page 10</a><a href="#abschnitt-11">Page 11</a><a href="#abschnitt-12">Page 12</a><a href="#abschnitt-13">Page 13</a><a href="#abschnitt-14">Page 14</a><a href="#abschnitt-15">Page 15</a><a href="#abschnitt-16">Page 16</a><a href="#abschnitt-17">Page 17</a><a href="#abschnitt-18">Page 18</a><a href="#abschnitt-19">Page 19</a><a href="#abschnitt-20">Page 20</a><div class="toc-note">Feldfeste Games<br>Unreal Engine 5.2<br>Castellum / Castle Age</div></aside></div><footer class="page-footer">Feldfeste Games · Development &amp; modding documentation <a href="mitarbeiten.html">Contribute →</a></footer></main></div><dialog id="search-dialog" aria-labelledby="search-title"><div class="search-top"><label id="search-title" for="search-input">Search the wiki</label><button id="search-close" aria-label="Close search">✕</button></div><input id="search-input" type="search" placeholder="Health, factions, Gameplay Tags …" autocomplete="off"><p id="search-status" role="status">Enter a search term. Search covers all 33 articles.</p><div id="search-results"></div></dialog></body></html>

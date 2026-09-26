@@ -30,3 +30,24 @@ Keep the document ID stable. Add new revisions with a date and preserve older or
 | Correction needed | The document content does not match its stated subject |
 
 Record the date, rationale and affected source for new decisions. Replace obsolete rules transparently rather than silently rewriting their history.
+
+## Insert an image
+
+1. Open the [wiki image folder on GitHub](https://github.com/Hannes821/StudioWebsite/tree/main/_wiki/public/images) and use **Add file → Upload files** to upload your PNG, JPG or WebP file. Use a clear filename without spaces, such as `building-setup.png`.
+2. Choose **Edit this page** on the wiki article and insert this Markdown where the image belongs:
+
+```markdown
+![Building setup in Unreal Engine](images/building-setup.png)
+```
+
+3. Commit the image and article changes to `main`. Automatic publishing makes both visible in the wiki.
+
+The path in Markdown begins with `images/`; the uploaded file lives in `_wiki/public/images/` in the repository. You can also make an image clickable to open its full resolution:
+
+```markdown
+[![Building setup in Unreal Engine](images/building-setup.png)](images/building-setup.png)
+```
+
+## Original instruction pages
+
+The Operation Instructions reproduce every source PDF page as an image to preserve the original diagrams, labels and layout. The `pdf-transcript` blocks in their Markdown files provide selectable, searchable extracted text. Editing a transcript changes that text only; it does not change the original page image. Put new notes in ordinary Markdown, or update the source document and regenerate its page images for a new revision.

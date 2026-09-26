@@ -1,0 +1,951 @@
+[
+  {
+    "id": "FF-OI-01",
+    "sha256": "8bebefdc00f1d50dd1273b8d1d44d42305385210ca9dc9b20b570083adb5441b",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-01/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 408
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-01/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 598
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-01/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 554
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-01/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1072
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-01/page-05.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1180
+      },
+      {
+        "number": 6,
+        "image": "images/operation-instructions/FF-OI-01/page-06.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 136
+      },
+      {
+        "number": 7,
+        "image": "images/operation-instructions/FF-OI-01/page-07.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 175
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-02",
+    "sha256": "47911c1323d757ffe181f035c807344ea69521910c4df48bf8cdd257979746e7",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-02/page-01.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 242
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-02/page-02.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 880
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-02/page-03.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 600
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-02/page-04.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 459
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-02/page-05.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 235
+      },
+      {
+        "number": 6,
+        "image": "images/operation-instructions/FF-OI-02/page-06.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 329
+      },
+      {
+        "number": 7,
+        "image": "images/operation-instructions/FF-OI-02/page-07.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 359
+      },
+      {
+        "number": 8,
+        "image": "images/operation-instructions/FF-OI-02/page-08.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 73
+      },
+      {
+        "number": 9,
+        "image": "images/operation-instructions/FF-OI-02/page-09.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 627
+      },
+      {
+        "number": 10,
+        "image": "images/operation-instructions/FF-OI-02/page-10.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 125
+      },
+      {
+        "number": 11,
+        "image": "images/operation-instructions/FF-OI-02/page-11.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 265
+      },
+      {
+        "number": 12,
+        "image": "images/operation-instructions/FF-OI-02/page-12.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 663
+      },
+      {
+        "number": 13,
+        "image": "images/operation-instructions/FF-OI-02/page-13.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 512
+      },
+      {
+        "number": 14,
+        "image": "images/operation-instructions/FF-OI-02/page-14.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 73
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-03",
+    "sha256": "42d1dbb0c0bac3f3fe25af416939eee0355eb452a7f5ec9517e78e39aa415770",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-03/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 298
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-03/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 260
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-03/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 720
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-03/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 477
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-03/page-05.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 375
+      },
+      {
+        "number": 6,
+        "image": "images/operation-instructions/FF-OI-03/page-06.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 814
+      },
+      {
+        "number": 7,
+        "image": "images/operation-instructions/FF-OI-03/page-07.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 594
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-04",
+    "sha256": "b6e61e93fe31eb189653394b18b3b24ccfc1ce84afefeffd7c961912fec3afd8",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-04/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 319
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-04/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 384
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-04/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 886
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-04/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 556
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-04/page-05.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 539
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-05",
+    "sha256": "87f26269e0d66104453c6dbda9e1dc036501ef85cf376a04f7db1f2b46b015d5",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-05/page-01.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 272
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-05/page-02.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 1040
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-05/page-03.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 367
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-06",
+    "sha256": "625666a994db90ddd3998dcdfdc9b0a8eb9b05709358f26778563e65b01c29af",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-06/page-01.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 248
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-06/page-02.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 1474
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-06/page-03.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 481
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-07",
+    "sha256": "e33a44a64a2e617480261d70a089ba27974a7826ddd6fbff89052146917af3a2",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-07/page-01.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 246
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-07/page-02.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 2834
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-07/page-03.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 1025
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-07/page-04.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 476
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-07/page-05.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 906
+      },
+      {
+        "number": 6,
+        "image": "images/operation-instructions/FF-OI-07/page-06.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 891
+      },
+      {
+        "number": 7,
+        "image": "images/operation-instructions/FF-OI-07/page-07.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 1633
+      },
+      {
+        "number": 8,
+        "image": "images/operation-instructions/FF-OI-07/page-08.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 175
+      },
+      {
+        "number": 9,
+        "image": "images/operation-instructions/FF-OI-07/page-09.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 307
+      },
+      {
+        "number": 10,
+        "image": "images/operation-instructions/FF-OI-07/page-10.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 98
+      },
+      {
+        "number": 11,
+        "image": "images/operation-instructions/FF-OI-07/page-11.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 1293
+      },
+      {
+        "number": 12,
+        "image": "images/operation-instructions/FF-OI-07/page-12.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 784
+      },
+      {
+        "number": 13,
+        "image": "images/operation-instructions/FF-OI-07/page-13.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 75
+      },
+      {
+        "number": 14,
+        "image": "images/operation-instructions/FF-OI-07/page-14.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 75
+      },
+      {
+        "number": 15,
+        "image": "images/operation-instructions/FF-OI-07/page-15.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 157
+      },
+      {
+        "number": 16,
+        "image": "images/operation-instructions/FF-OI-07/page-16.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 275
+      },
+      {
+        "number": 17,
+        "image": "images/operation-instructions/FF-OI-07/page-17.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 1602
+      },
+      {
+        "number": 18,
+        "image": "images/operation-instructions/FF-OI-07/page-18.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 923
+      },
+      {
+        "number": 19,
+        "image": "images/operation-instructions/FF-OI-07/page-19.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 75
+      },
+      {
+        "number": 20,
+        "image": "images/operation-instructions/FF-OI-07/page-20.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 148
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-08",
+    "sha256": "549be9aa3c3432cbb0addc5c5225f353a76d6facf38afb99b766d290589f3c74",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-08/page-01.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 259
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-08/page-02.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 829
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-08/page-03.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 387
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-09",
+    "sha256": "1fe3a6f00318b15f1737374eb97ad901a961a440ae24fa5db8638a7b2b69051b",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-09/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 286
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-09/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 307
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-09/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 484
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-09/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 228
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-09/page-05.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1589
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-10",
+    "sha256": "ac0f4c4ff27d28e659ae9eb47a91464b18903c7f2b7b6e446dff43c1f092f879",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-10/page-01.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 244
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-10/page-02.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 1089
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-10/page-03.webp",
+        "width": 1489,
+        "height": 2105,
+        "textChars": 285
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-11",
+    "sha256": "325152879b8a485c7e3727f2cee5d31b752de4c131c35ac7514d59f7496e4aa2",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-11/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 258
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-11/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 2528
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-11/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 2474
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-11/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1269
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-11/page-05.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 957
+      },
+      {
+        "number": 6,
+        "image": "images/operation-instructions/FF-OI-11/page-06.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 471
+      },
+      {
+        "number": 7,
+        "image": "images/operation-instructions/FF-OI-11/page-07.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 949
+      },
+      {
+        "number": 8,
+        "image": "images/operation-instructions/FF-OI-11/page-08.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1599
+      },
+      {
+        "number": 9,
+        "image": "images/operation-instructions/FF-OI-11/page-09.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1992
+      },
+      {
+        "number": 10,
+        "image": "images/operation-instructions/FF-OI-11/page-10.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1677
+      },
+      {
+        "number": 11,
+        "image": "images/operation-instructions/FF-OI-11/page-11.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1453
+      },
+      {
+        "number": 12,
+        "image": "images/operation-instructions/FF-OI-11/page-12.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1512
+      },
+      {
+        "number": 13,
+        "image": "images/operation-instructions/FF-OI-11/page-13.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1617
+      },
+      {
+        "number": 14,
+        "image": "images/operation-instructions/FF-OI-11/page-14.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 457
+      },
+      {
+        "number": 15,
+        "image": "images/operation-instructions/FF-OI-11/page-15.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 139
+      },
+      {
+        "number": 16,
+        "image": "images/operation-instructions/FF-OI-11/page-16.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 134
+      },
+      {
+        "number": 17,
+        "image": "images/operation-instructions/FF-OI-11/page-17.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 133
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-12",
+    "sha256": "0e74477d77f0c421531c950b7dee421255ab61a0d9d9f37ddc778191662daaea",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-12/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 264
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-12/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1642
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-12/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 416
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-12/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 676
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-13",
+    "sha256": "aa793c92c3dec5d606a12503a60e19207f24442f335290972266860871e9567f",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-13/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 272
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-13/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 763
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-13/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1810
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-13/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 129
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-14",
+    "sha256": "5dd6d22af8ba0b6e5a72e63ab68c5950c04c4ffb54e6ff7b674219e9da635a6b",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-14/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 278
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-14/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 767
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-14/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1814
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-14/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 133
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-15",
+    "sha256": "32057fbf71b0d9e676a737b19f8663ae2c9eb23058e30426bd4c09dc47a12d74",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-15/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 259
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-15/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 331
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-16",
+    "sha256": "4e8a6edc3cb7910975d5cb7444ac7c65af244157fa6c58e1826f9f0b94b2db89",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-16/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 260
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-16/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 232
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-16/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 264
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-16/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 148
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-16/page-05.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 248
+      },
+      {
+        "number": 6,
+        "image": "images/operation-instructions/FF-OI-16/page-06.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1065
+      }
+    ]
+  },
+  {
+    "id": "FF-OI-17",
+    "sha256": "6880ab9b91bc88d8d9aa9c64dcb31f4e9ae89b7f97c3d670ff37c8a4ab9cd5b1",
+    "pages": [
+      {
+        "number": 1,
+        "image": "images/operation-instructions/FF-OI-17/page-01.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 271
+      },
+      {
+        "number": 2,
+        "image": "images/operation-instructions/FF-OI-17/page-02.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 4185
+      },
+      {
+        "number": 3,
+        "image": "images/operation-instructions/FF-OI-17/page-03.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1535
+      },
+      {
+        "number": 4,
+        "image": "images/operation-instructions/FF-OI-17/page-04.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 2931
+      },
+      {
+        "number": 5,
+        "image": "images/operation-instructions/FF-OI-17/page-05.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 2248
+      },
+      {
+        "number": 6,
+        "image": "images/operation-instructions/FF-OI-17/page-06.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 2429
+      },
+      {
+        "number": 7,
+        "image": "images/operation-instructions/FF-OI-17/page-07.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 430
+      },
+      {
+        "number": 8,
+        "image": "images/operation-instructions/FF-OI-17/page-08.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 2005
+      },
+      {
+        "number": 9,
+        "image": "images/operation-instructions/FF-OI-17/page-09.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1917
+      },
+      {
+        "number": 10,
+        "image": "images/operation-instructions/FF-OI-17/page-10.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1107
+      },
+      {
+        "number": 11,
+        "image": "images/operation-instructions/FF-OI-17/page-11.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1475
+      },
+      {
+        "number": 12,
+        "image": "images/operation-instructions/FF-OI-17/page-12.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 2206
+      },
+      {
+        "number": 13,
+        "image": "images/operation-instructions/FF-OI-17/page-13.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 741
+      },
+      {
+        "number": 14,
+        "image": "images/operation-instructions/FF-OI-17/page-14.webp",
+        "width": 1490,
+        "height": 2105,
+        "textChars": 1894
+      }
+    ]
+  }
+]

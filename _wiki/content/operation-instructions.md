@@ -1,4 +1,4 @@
-Versioned working instructions for Unreal Engine, game design and team collaboration. The summaries provide an entry point; the original PDFs remain directly available.
+Versioned working instructions for Unreal Engine, game design and team collaboration. All 17 instructions are mirrored in full, page by page, with their original illustrations, tables and labels. Each page also includes expandable text for copying and wiki search. The original PDFs remain available to download.
 
 | Document | Topic | Revision | Status |
 |---|---|---|---|
