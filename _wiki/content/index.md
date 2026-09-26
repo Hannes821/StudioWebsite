@@ -1,6 +1,4 @@
-Public development and modding documentation for Castellum. Read every article and download the original Operation Instructions without an account.
-
-Game design, technical workflows and the sources behind them — one place to find what the team knows about Castellum.
+Public development and modding documentation for Castellum. 
 
 ## Start here
 
