@@ -16,3 +16,23 @@ Castellum is a classic real-time strategy game with feudal economy, castle base 
 - [Castles]
 - [Campaigns]
 - [Regions]
+
+## Deeper into the technical Work Flows
+- [Chat System and Cheats](/wiki/oi-01.html)
+- [Texture Materials](/wiki/oi-02.html)
+- [Setting up Buildings](/wiki/oi-03.html)
+- [Buildings Submenu](/wiki/oi-04.html)
+- [Installing the Dev Build](/wiki/oi-05.html)
+- [Claim Administration](/wiki/oi-06.html)
+- [Level Design](/wiki/oi-07.html)
+- [Using MetaHuman](/wiki/oi-09.html)
+- [Coding Best Practices](/wiki/oi-08.html)
+- [Art Asset Workflow](/wiki/oi-10.html)
+- [Damage System](/wiki/oi-11.html)
+- [Merging Branches](/wiki/oi-12.html)
+- [User Interface Icons](/wiki/oi-13.html)
+- [Virtual Runtime Textures](/wiki/oi-14.html)
+- [Online Systems](/wiki/oi-15.html)
+- [Time Management](/wiki/oi-16.html)
+- [Attribute Components](/wiki/oi-17.html)
+- [to be continued]
