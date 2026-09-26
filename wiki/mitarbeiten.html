@@ -27,7 +27,7 @@
 <li>Choose <strong>Edit this page</strong> to open its Markdown source in the public website repository. Sign in with an account that has write access.</li>
 <li>Update the English text, source reference and date. Distinguish design intentions from verified implementation.</li>
 <li>Submit the change with a concise description. Use a pull request for architecture changes that need team review.</li>
-<li>Build the website repository with <code>node _wiki/scripts/build.mjs</code> and check it with <code>node --test _wiki/tests/content.test.mjs</code>. Commit the updated <code>wiki/</code> output together with the Markdown changes. GitHub Pages then publishes the website.</li>
+<li>Commit your Markdown changes to <code>main</code> (or merge the reviewed pull request). The “Publish website and wiki” workflow automatically rebuilds, checks and publishes the website. Allow a few minutes for the update to appear; no manual HTML editing or rebuild is needed.</li>
 </ol>
 <p>All wiki articles, search data and original PDFs are publicly readable without signing in. Direct editing and publishing require team repository permissions. Visitors can propose corrections through GitHub for team review.</p>
 <h2 id="abschnitt-3">Add an Operation Instruction</h2><p>Keep the document ID stable. Add new revisions with a date and preserve older originals. Update the summary, original-file link and review status together. If approval status is unknown, use “Source snapshot” or “Review needed”.</p>

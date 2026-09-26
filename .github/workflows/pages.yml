@@ -1,0 +1,43 @@
+name: Publish website and wiki
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/configure-pages@v5
+      - name: Generate wiki from Markdown
+        run: node _wiki/scripts/build.mjs
+      - name: Check articles, links and PDFs
+        run: node --test _wiki/tests/content.test.mjs
+      - name: Prepare public website
+        run: |
+          mkdir _site
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='_wiki/' --exclude='_site/' --exclude='README.md' --exclude='CONTENT_BACKLOG.md' ./ _site/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4

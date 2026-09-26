@@ -13,7 +13,7 @@ Direct publishing is limited to collaborators authorised in the StudioWebsite re
 1. Choose **Edit this page** to open its Markdown source in the public website repository. Sign in with an account that has write access.
 2. Update the English text, source reference and date. Distinguish design intentions from verified implementation.
 3. Submit the change with a concise description. Use a pull request for architecture changes that need team review.
-4. Build the website repository with `node _wiki/scripts/build.mjs` and check it with `node --test _wiki/tests/content.test.mjs`. Commit the updated `wiki/` output together with the Markdown changes. GitHub Pages then publishes the website.
+4. Commit your Markdown changes to `main` (or merge the reviewed pull request). The “Publish website and wiki” workflow automatically rebuilds, checks and publishes the website. Allow a few minutes for the update to appear; no manual HTML editing or rebuild is needed.
 
 All wiki articles, search data and original PDFs are publicly readable without signing in. Direct editing and publishing require team repository permissions. Visitors can propose corrections through GitHub for team review.
 
