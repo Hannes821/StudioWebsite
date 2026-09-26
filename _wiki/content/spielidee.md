@@ -16,6 +16,12 @@ Castellum is a classic real-time strategy game with feudal economy, castle base 
 - [Castles]
 - [Campaigns]
 - [Regions]
+- [Romanesque Art]
+- [Romanesque Music]
+- [Romanesque Manuscripts]
+- [Romanesque Architecture]
+- [Romanesque Clothing and Items]
+- [Early Heraldry]
 
 ## Deeper into the technical Work Flows
 - [Chat System and Cheats](/wiki/oi-01.html)
